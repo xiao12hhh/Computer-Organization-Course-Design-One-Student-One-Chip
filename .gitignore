@@ -1,0 +1,51 @@
+# Virtual machines and installers
+*.iso
+*.vmdk
+*.vmem
+*.vmss
+*.vmsn
+*.vmx
+*.vmxf
+*.nvram
+*.ova
+*.ovf
+*.flp
+*.msi
+*.exe
+*.dmg
+Downloads/
+
+# Build outputs and generated waveforms
+build/
+obj_dir/
+*.o
+*.a
+*.so
+*.so.*
+*.vcd
+*.fst
+*.vpd
+coverage.dat
+*.log
+__pycache__/
+*.pyc
+
+# Local credentials and setup sessions
+.ssh/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+id_rsa*
+id_ed25519*
+authorized_keys
+known_hosts
+.setup-local/
+
+# Editor and OS temporary files
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
