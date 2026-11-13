@@ -26,7 +26,11 @@ obj_dir/
 *.fst
 *.vpd
 coverage.dat
+core
+core.*
 *.log
+# Generated exhaustive Logisim vectors (regenerate with tools/generate_logisim.py)
+/logisim/*.txt
 __pycache__/
 *.pyc
 

@@ -4,7 +4,7 @@
 
 ## 当前进度
 
-截至 2026-11-11：
+截至 2026-11-13：
 
 - 已安装 VMware 和 Ubuntu 22.04.5 LTS。
 - 已安装 Logisim-evolution，并完成第一个简单电路（学习者反馈；电路文件尚未归档）。
@@ -13,14 +13,19 @@
 - NVBoard 官方示例已运行，LED 流水灯、数码管和 VGA 图片显示正常。
 - GTKWave 已打开生成的 VCD 并显示信号。
 
-目前完成的是环境准备和官方示例验证。自行编写的流水灯、后续实验代码和实验报告尚待完成。
+已追加前八周的本地参考实验包：Logisim 基础电路、求和状态机、完整 sCPU、两指令 minirv、HDLBits 本地练习与 NVBoard 演示。代码由 AI 根据学习者要求编写并验证，尚未取得学校 OJ 或 HDLBits 的在线通过记录，不代表学习者已独立掌握。
 
 ## 文档
 
 - [环境配置和使用说明](docs/environment.md)
 - [学习进度日志](docs/progress.md)
+- [前八周实验内容、运行方法与验收范围](docs/weeks01-08.md)
+- [后续补学顺序](docs/study-next.md)
+- [本地验证结果](docs/test-results.md)
 
-后续有实际文件时再加入 Logisim 电路、Verilog/C/C++ 源码、构建脚本及实验报告。
+电路位于 `logisim/`，硬件代码位于 `rtl/`，平台题目本地版本位于 `hdlbits/`，测试位于 `tests/`，虚拟板入口位于 `nvboard/`。
+
+Ubuntu 在仓库目录执行 `make test`；Windows 按前八周说明生成测试向量，再运行 `python tools/test_logisim.py`。新实验已部署到 Ubuntu 的 `~/course-week8-work`。
 
 ## 提交约定
 

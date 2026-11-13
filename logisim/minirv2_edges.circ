@@ -1,0 +1,2494 @@
+<?xml version='1.0' encoding='utf-8'?>
+<project source="4.0.0" version="1.0">
+  <lib name="0" desc="#Wiring" />
+  <lib name="1" desc="#Gates" />
+  <lib name="2" desc="#Plexers" />
+  <lib name="3" desc="#Arithmetic" />
+  <lib name="4" desc="#Memory" />
+  <lib name="5" desc="#I/O" />
+  <main name="minirv2_edges" />
+  <circuit name="minirv2_edges">
+    <comp lib="0" name="Clock" loc="(180,160)" />
+    <wire from="(180,160)" to="(220,160)" />
+    <comp lib="0" name="Tunnel" loc="(220,160)">
+      <a name="label" val="clock" />
+      <a name="width" val="1" />
+      <a name="facing" val="west" />
+    </comp>
+    <comp lib="0" name="Pin" loc="(700,160)">
+      <a name="label" val="Reset" />
+      <a name="width" val="1" />
+      <a name="tristate" val="false" />
+      <a name="output" val="false" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(700,160)" to="(740,160)" />
+    <comp lib="0" name="Tunnel" loc="(740,160)">
+      <a name="label" val="Reset" />
+      <a name="width" val="1" />
+      <a name="facing" val="west" />
+    </comp>
+    <comp lib="0" name="Constant" loc="(1220,160)">
+      <a name="width" val="32" />
+      <a name="value" val="0x0" />
+    </comp>
+    <wire from="(1220,160)" to="(1260,160)" />
+    <comp lib="0" name="Tunnel" loc="(1260,160)">
+      <a name="label" val="n3" />
+      <a name="width" val="32" />
+      <a name="facing" val="west" />
+    </comp>
+    <comp lib="0" name="Splitter" loc="(1740,160)">
+      <a name="incoming" val="32" />
+      <a name="fanout" val="3" />
+      <a name="appear" val="right" />
+      <a name="facing" val="east" />
+      <a name="bit0" val="0" />
+      <a name="bit1" val="0" />
+      <a name="bit2" val="1" />
+      <a name="bit3" val="1" />
+      <a name="bit4" val="1" />
+      <a name="bit5" val="1" />
+      <a name="bit6" val="1" />
+      <a name="bit7" val="1" />
+      <a name="bit8" val="2" />
+      <a name="bit9" val="2" />
+      <a name="bit10" val="2" />
+      <a name="bit11" val="2" />
+      <a name="bit12" val="2" />
+      <a name="bit13" val="2" />
+      <a name="bit14" val="2" />
+      <a name="bit15" val="2" />
+      <a name="bit16" val="2" />
+      <a name="bit17" val="2" />
+      <a name="bit18" val="2" />
+      <a name="bit19" val="2" />
+      <a name="bit20" val="2" />
+      <a name="bit21" val="2" />
+      <a name="bit22" val="2" />
+      <a name="bit23" val="2" />
+      <a name="bit24" val="2" />
+      <a name="bit25" val="2" />
+      <a name="bit26" val="2" />
+      <a name="bit27" val="2" />
+      <a name="bit28" val="2" />
+      <a name="bit29" val="2" />
+      <a name="bit30" val="2" />
+      <a name="bit31" val="2" />
+    </comp>
+    <wire from="(1740,160)" to="(1780,160)" />
+    <comp lib="0" name="Tunnel" loc="(1780,160)">
+      <a name="label" val="PC" />
+      <a name="width" val="32" />
+      <a name="facing" val="west" />
+    </comp>
+    <wire from="(1760,170)" to="(1800,170)" />
+    <comp lib="0" name="Tunnel" loc="(1800,170)">
+      <a name="label" val="n20" />
+      <a name="width" val="2" />
+      <a name="facing" val="west" />
+    </comp>
+    <wire from="(1760,180)" to="(1800,180)" />
+    <comp lib="0" name="Tunnel" loc="(1800,180)">
+      <a name="label" val="n21" />
+      <a name="width" val="6" />
+      <a name="facing" val="west" />
+    </comp>
+    <wire from="(1760,190)" to="(1800,190)" />
+    <comp lib="0" name="Tunnel" loc="(1800,190)">
+      <a name="label" val="n22" />
+      <a name="width" val="24" />
+      <a name="facing" val="west" />
+    </comp>
+    <comp lib="4" name="ROM" loc="(2260,160)">
+      <a name="addrWidth" val="6" />
+      <a name="dataWidth" val="32" />
+      <a name="appearance" val="classic" />
+      <a name="contents">addr/data: 6 32
+fff00113 110193 80000213 7ff00293 6300013 1d00313 30367 1c00067
+</a>
+    </comp>
+    <wire from="(2260,170)" to="(2300,170)" />
+    <comp lib="0" name="Tunnel" loc="(2300,170)">
+      <a name="label" val="n21" />
+      <a name="width" val="6" />
+      <a name="facing" val="west" />
+    </comp>
+    <wire from="(2500,220)" to="(2540,220)" />
+    <comp lib="0" name="Tunnel" loc="(2540,220)">
+      <a name="label" val="n23" />
+      <a name="width" val="32" />
+      <a name="facing" val="west" />
+    </comp>
+    <comp lib="0" name="Splitter" loc="(2780,160)">
+      <a name="incoming" val="32" />
+      <a name="fanout" val="5" />
+      <a name="appear" val="right" />
+      <a name="facing" val="east" />
+      <a name="bit0" val="0" />
+      <a name="bit1" val="0" />
+      <a name="bit2" val="0" />
+      <a name="bit3" val="0" />
+      <a name="bit4" val="0" />
+      <a name="bit5" val="0" />
+      <a name="bit6" val="0" />
+      <a name="bit7" val="1" />
+      <a name="bit8" val="1" />
+      <a name="bit9" val="1" />
+      <a name="bit10" val="1" />
+      <a name="bit11" val="1" />
+      <a name="bit12" val="2" />
+      <a name="bit13" val="2" />
+      <a name="bit14" val="2" />
+      <a name="bit15" val="3" />
+      <a name="bit16" val="3" />
+      <a name="bit17" val="3" />
+      <a name="bit18" val="3" />
+      <a name="bit19" val="3" />
+      <a name="bit20" val="4" />
+      <a name="bit21" val="4" />
+      <a name="bit22" val="4" />
+      <a name="bit23" val="4" />
+      <a name="bit24" val="4" />
+      <a name="bit25" val="4" />
+      <a name="bit26" val="4" />
+      <a name="bit27" val="4" />
+      <a name="bit28" val="4" />
+      <a name="bit29" val="4" />
+      <a name="bit30" val="4" />
+      <a name="bit31" val="4" />
+    </comp>
+    <wire from="(2780,160)" to="(2820,160)" />
+    <comp lib="0" name="Tunnel" loc="(2820,160)">
+      <a name="label" val="n23" />
+      <a name="width" val="32" />
+      <a name="facing" val="west" />
+    </comp>
+    <wire from="(2800,170)" to="(2840,170)" />
+    <comp lib="0" name="Tunnel" loc="(2840,170)">
+      <a name="label" val="n24" />
+      <a name="width" val="7" />
+      <a name="facing" val="west" />
+    </comp>
+    <wire from="(2800,180)" to="(2840,180)" />
+    <comp lib="0" name="Tunnel" loc="(2840,180)">
+      <a name="label" val="n25" />
+      <a name="width" val="5" />
+      <a name="facing" val="west" />
+    </comp>
+    <wire from="(2800,190)" to="(2840,190)" />
+    <comp lib="0" name="Tunnel" loc="(2840,190)">
+      <a name="label" val="n26" />
+      <a name="width" val="3" />
+      <a name="facing" val="west" />
+    </comp>
+    <wire from="(2800,200)" to="(2840,200)" />
+    <comp lib="0" name="Tunnel" loc="(2840,200)">
+      <a name="label" val="n27" />
+      <a name="width" val="5" />
+      <a name="facing" val="west" />
+    </comp>
+    <wire from="(2800,210)" to="(2840,210)" />
+    <comp lib="0" name="Tunnel" loc="(2840,210)">
+      <a name="label" val="n28" />
+      <a name="width" val="12" />
+      <a name="facing" val="west" />
+    </comp>
+    <comp lib="0" name="Splitter" loc="(180,370)">
+      <a name="incoming" val="5" />
+      <a name="fanout" val="2" />
+      <a name="appear" val="right" />
+      <a name="facing" val="east" />
+      <a name="bit0" val="0" />
+      <a name="bit1" val="0" />
+      <a name="bit2" val="0" />
+      <a name="bit3" val="0" />
+      <a name="bit4" val="1" />
+    </comp>
+    <wire from="(180,370)" to="(220,370)" />
+    <comp lib="0" name="Tunnel" loc="(220,370)">
+      <a name="label" val="n25" />
+      <a name="width" val="5" />
+      <a name="facing" val="west" />
+    </comp>
+    <wire from="(200,380)" to="(240,380)" />
+    <comp lib="0" name="Tunnel" loc="(240,380)">
+      <a name="label" val="n29" />
+      <a name="width" val="4" />
+      <a name="facing" val="west" />
+    </comp>
+    <wire from="(200,390)" to="(240,390)" />
+    <comp lib="0" name="Tunnel" loc="(240,390)">
+      <a name="label" val="n30" />
+      <a name="width" val="1" />
+      <a name="facing" val="west" />
+    </comp>
+    <comp lib="0" name="Splitter" loc="(700,370)">
+      <a name="incoming" val="5" />
+      <a name="fanout" val="2" />
+      <a name="appear" val="right" />
+      <a name="facing" val="east" />
+      <a name="bit0" val="0" />
+      <a name="bit1" val="0" />
+      <a name="bit2" val="0" />
+      <a name="bit3" val="0" />
+      <a name="bit4" val="1" />
+    </comp>
+    <wire from="(700,370)" to="(740,370)" />
+    <comp lib="0" name="Tunnel" loc="(740,370)">
+      <a name="label" val="n27" />
+      <a name="width" val="5" />
+      <a name="facing" val="west" />
+    </comp>
+    <wire from="(720,380)" to="(760,380)" />
+    <comp lib="0" name="Tunnel" loc="(760,380)">
+      <a name="label" val="n31" />
+      <a name="width" val="4" />
+      <a name="facing" val="west" />
+    </comp>
+    <wire from="(720,390)" to="(760,390)" />
+    <comp lib="0" name="Tunnel" loc="(760,390)">
+      <a name="label" val="n32" />
+      <a name="width" val="1" />
+      <a name="facing" val="west" />
+    </comp>
+    <comp lib="0" name="Constant" loc="(1220,370)">
+      <a name="width" val="3" />
+      <a name="value" val="0x0" />
+    </comp>
+    <wire from="(1220,370)" to="(1260,370)" />
+    <comp lib="0" name="Tunnel" loc="(1260,370)">
+      <a name="label" val="n33" />
+      <a name="width" val="3" />
+      <a name="facing" val="west" />
+    </comp>
+    <comp lib="3" name="Comparator" loc="(1740,370)">
+      <a name="width" val="3" />
+      <a name="mode" val="unsigned" />
+    </comp>
+    <wire from="(1700,360)" to="(1660,360)" />
+    <comp lib="0" name="Tunnel" loc="(1660,360)">
+      <a name="label" val="n26" />
+      <a name="width" val="3" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(1700,380)" to="(1660,380)" />
+    <comp lib="0" name="Tunnel" loc="(1660,380)">
+      <a name="label" val="n33" />
+      <a name="width" val="3" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(1740,370)" to="(1780,370)" />
+    <comp lib="0" name="Tunnel" loc="(1780,370)">
+      <a name="label" val="n34" />
+      <a name="width" val="1" />
+      <a name="facing" val="west" />
+    </comp>
+    <comp lib="0" name="Constant" loc="(2260,370)">
+      <a name="width" val="7" />
+      <a name="value" val="0x13" />
+    </comp>
+    <wire from="(2260,370)" to="(2300,370)" />
+    <comp lib="0" name="Tunnel" loc="(2300,370)">
+      <a name="label" val="n35" />
+      <a name="width" val="7" />
+      <a name="facing" val="west" />
+    </comp>
+    <comp lib="3" name="Comparator" loc="(2780,370)">
+      <a name="width" val="7" />
+      <a name="mode" val="unsigned" />
+    </comp>
+    <wire from="(2740,360)" to="(2700,360)" />
+    <comp lib="0" name="Tunnel" loc="(2700,360)">
+      <a name="label" val="n24" />
+      <a name="width" val="7" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(2740,380)" to="(2700,380)" />
+    <comp lib="0" name="Tunnel" loc="(2700,380)">
+      <a name="label" val="n35" />
+      <a name="width" val="7" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(2780,370)" to="(2820,370)" />
+    <comp lib="0" name="Tunnel" loc="(2820,370)">
+      <a name="label" val="n36" />
+      <a name="width" val="1" />
+      <a name="facing" val="west" />
+    </comp>
+    <comp lib="0" name="Constant" loc="(180,580)">
+      <a name="width" val="7" />
+      <a name="value" val="0x67" />
+    </comp>
+    <wire from="(180,580)" to="(220,580)" />
+    <comp lib="0" name="Tunnel" loc="(220,580)">
+      <a name="label" val="n37" />
+      <a name="width" val="7" />
+      <a name="facing" val="west" />
+    </comp>
+    <comp lib="3" name="Comparator" loc="(700,580)">
+      <a name="width" val="7" />
+      <a name="mode" val="unsigned" />
+    </comp>
+    <wire from="(660,570)" to="(620,570)" />
+    <comp lib="0" name="Tunnel" loc="(620,570)">
+      <a name="label" val="n24" />
+      <a name="width" val="7" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(660,590)" to="(620,590)" />
+    <comp lib="0" name="Tunnel" loc="(620,590)">
+      <a name="label" val="n37" />
+      <a name="width" val="7" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(700,580)" to="(740,580)" />
+    <comp lib="0" name="Tunnel" loc="(740,580)">
+      <a name="label" val="n38" />
+      <a name="width" val="1" />
+      <a name="facing" val="west" />
+    </comp>
+    <comp lib="1" name="OR Gate" loc="(1220,580)">
+      <a name="size" val="30" />
+      <a name="width" val="1" />
+      <a name="inputs" val="2" />
+    </comp>
+    <wire from="(1220,580)" to="(1260,580)" />
+    <comp lib="0" name="Tunnel" loc="(1260,580)">
+      <a name="label" val="n39" />
+      <a name="width" val="1" />
+      <a name="facing" val="west" />
+    </comp>
+    <wire from="(1190,570)" to="(1150,570)" />
+    <comp lib="0" name="Tunnel" loc="(1150,570)">
+      <a name="label" val="n36" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(1190,590)" to="(1150,590)" />
+    <comp lib="0" name="Tunnel" loc="(1150,590)">
+      <a name="label" val="n38" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <comp lib="1" name="AND Gate" loc="(1740,580)">
+      <a name="size" val="30" />
+      <a name="width" val="1" />
+      <a name="inputs" val="2" />
+    </comp>
+    <wire from="(1740,580)" to="(1780,580)" />
+    <comp lib="0" name="Tunnel" loc="(1780,580)">
+      <a name="label" val="n40" />
+      <a name="width" val="1" />
+      <a name="facing" val="west" />
+    </comp>
+    <wire from="(1710,570)" to="(1670,570)" />
+    <comp lib="0" name="Tunnel" loc="(1670,570)">
+      <a name="label" val="n39" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(1710,590)" to="(1670,590)" />
+    <comp lib="0" name="Tunnel" loc="(1670,590)">
+      <a name="label" val="n34" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <comp lib="1" name="OR Gate" loc="(2260,580)">
+      <a name="size" val="30" />
+      <a name="width" val="1" />
+      <a name="inputs" val="2" />
+    </comp>
+    <wire from="(2260,580)" to="(2300,580)" />
+    <comp lib="0" name="Tunnel" loc="(2300,580)">
+      <a name="label" val="n41" />
+      <a name="width" val="1" />
+      <a name="facing" val="west" />
+    </comp>
+    <wire from="(2230,570)" to="(2190,570)" />
+    <comp lib="0" name="Tunnel" loc="(2190,570)">
+      <a name="label" val="n30" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(2230,590)" to="(2190,590)" />
+    <comp lib="0" name="Tunnel" loc="(2190,590)">
+      <a name="label" val="n32" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <comp lib="1" name="NOT Gate" loc="(2780,580)">
+      <a name="size" val="30" />
+      <a name="width" val="1" />
+    </comp>
+    <wire from="(2780,580)" to="(2820,580)" />
+    <comp lib="0" name="Tunnel" loc="(2820,580)">
+      <a name="label" val="n42" />
+      <a name="width" val="1" />
+      <a name="facing" val="west" />
+    </comp>
+    <wire from="(2750,580)" to="(2710,580)" />
+    <comp lib="0" name="Tunnel" loc="(2710,580)">
+      <a name="label" val="n41" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <comp lib="1" name="AND Gate" loc="(180,790)">
+      <a name="size" val="30" />
+      <a name="width" val="1" />
+      <a name="inputs" val="2" />
+    </comp>
+    <wire from="(180,790)" to="(220,790)" />
+    <comp lib="0" name="Tunnel" loc="(220,790)">
+      <a name="label" val="n43" />
+      <a name="width" val="1" />
+      <a name="facing" val="west" />
+    </comp>
+    <wire from="(150,780)" to="(110,780)" />
+    <comp lib="0" name="Tunnel" loc="(110,780)">
+      <a name="label" val="n40" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(150,800)" to="(110,800)" />
+    <comp lib="0" name="Tunnel" loc="(110,800)">
+      <a name="label" val="n42" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <comp lib="2" name="Multiplexer" loc="(700,790)">
+      <a name="width" val="32" />
+      <a name="select" val="4" />
+      <a name="enable" val="false" />
+      <a name="size" val="40" />
+    </comp>
+    <wire from="(700,790)" to="(740,790)" />
+    <comp lib="0" name="Tunnel" loc="(740,790)">
+      <a name="label" val="n44" />
+      <a name="width" val="32" />
+      <a name="facing" val="west" />
+    </comp>
+    <wire from="(660,710)" to="(620,710)" />
+    <comp lib="0" name="Tunnel" loc="(620,710)">
+      <a name="label" val="n3" />
+      <a name="width" val="32" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(660,720)" to="(620,720)" />
+    <comp lib="0" name="Tunnel" loc="(620,720)">
+      <a name="label" val="x1" />
+      <a name="width" val="32" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(660,730)" to="(620,730)" />
+    <comp lib="0" name="Tunnel" loc="(620,730)">
+      <a name="label" val="x2" />
+      <a name="width" val="32" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(660,740)" to="(620,740)" />
+    <comp lib="0" name="Tunnel" loc="(620,740)">
+      <a name="label" val="x3" />
+      <a name="width" val="32" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(660,750)" to="(620,750)" />
+    <comp lib="0" name="Tunnel" loc="(620,750)">
+      <a name="label" val="x4" />
+      <a name="width" val="32" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(660,760)" to="(620,760)" />
+    <comp lib="0" name="Tunnel" loc="(620,760)">
+      <a name="label" val="x5" />
+      <a name="width" val="32" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(660,770)" to="(620,770)" />
+    <comp lib="0" name="Tunnel" loc="(620,770)">
+      <a name="label" val="x6" />
+      <a name="width" val="32" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(660,780)" to="(620,780)" />
+    <comp lib="0" name="Tunnel" loc="(620,780)">
+      <a name="label" val="x7" />
+      <a name="width" val="32" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(660,790)" to="(620,790)" />
+    <comp lib="0" name="Tunnel" loc="(620,790)">
+      <a name="label" val="x8" />
+      <a name="width" val="32" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(660,800)" to="(620,800)" />
+    <comp lib="0" name="Tunnel" loc="(620,800)">
+      <a name="label" val="x9" />
+      <a name="width" val="32" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(660,810)" to="(620,810)" />
+    <comp lib="0" name="Tunnel" loc="(620,810)">
+      <a name="label" val="x10" />
+      <a name="width" val="32" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(660,820)" to="(620,820)" />
+    <comp lib="0" name="Tunnel" loc="(620,820)">
+      <a name="label" val="x11" />
+      <a name="width" val="32" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(660,830)" to="(620,830)" />
+    <comp lib="0" name="Tunnel" loc="(620,830)">
+      <a name="label" val="x12" />
+      <a name="width" val="32" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(660,840)" to="(620,840)" />
+    <comp lib="0" name="Tunnel" loc="(620,840)">
+      <a name="label" val="x13" />
+      <a name="width" val="32" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(660,850)" to="(620,850)" />
+    <comp lib="0" name="Tunnel" loc="(620,850)">
+      <a name="label" val="x14" />
+      <a name="width" val="32" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(660,860)" to="(620,860)" />
+    <comp lib="0" name="Tunnel" loc="(620,860)">
+      <a name="label" val="x15" />
+      <a name="width" val="32" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(680,870)" to="(640,870)" />
+    <comp lib="0" name="Tunnel" loc="(640,870)">
+      <a name="label" val="n31" />
+      <a name="width" val="4" />
+      <a name="facing" val="east" />
+    </comp>
+    <comp lib="0" name="Bit Extender" loc="(1220,790)">
+      <a name="in_width" val="12" />
+      <a name="out_width" val="32" />
+      <a name="type" val="sign" />
+    </comp>
+    <wire from="(1180,790)" to="(1140,790)" />
+    <comp lib="0" name="Tunnel" loc="(1140,790)">
+      <a name="label" val="n28" />
+      <a name="width" val="12" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(1220,790)" to="(1260,790)" />
+    <comp lib="0" name="Tunnel" loc="(1260,790)">
+      <a name="label" val="n45" />
+      <a name="width" val="32" />
+      <a name="facing" val="west" />
+    </comp>
+    <comp lib="0" name="Constant" loc="(1740,790)">
+      <a name="width" val="1" />
+      <a name="value" val="0x0" />
+    </comp>
+    <wire from="(1740,790)" to="(1780,790)" />
+    <comp lib="0" name="Tunnel" loc="(1780,790)">
+      <a name="label" val="n47" />
+      <a name="width" val="1" />
+      <a name="facing" val="west" />
+    </comp>
+    <comp lib="3" name="Adder" loc="(2260,790)">
+      <a name="width" val="32" />
+    </comp>
+    <wire from="(2220,780)" to="(2180,780)" />
+    <comp lib="0" name="Tunnel" loc="(2180,780)">
+      <a name="label" val="n44" />
+      <a name="width" val="32" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(2220,800)" to="(2180,800)" />
+    <comp lib="0" name="Tunnel" loc="(2180,800)">
+      <a name="label" val="n45" />
+      <a name="width" val="32" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(2240,770)" to="(2200,770)" />
+    <comp lib="0" name="Tunnel" loc="(2200,770)">
+      <a name="label" val="n47" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(2260,790)" to="(2300,790)" />
+    <comp lib="0" name="Tunnel" loc="(2300,790)">
+      <a name="label" val="n46" />
+      <a name="width" val="32" />
+      <a name="facing" val="west" />
+    </comp>
+    <comp lib="0" name="Constant" loc="(2780,790)">
+      <a name="width" val="32" />
+      <a name="value" val="0x4" />
+    </comp>
+    <wire from="(2780,790)" to="(2820,790)" />
+    <comp lib="0" name="Tunnel" loc="(2820,790)">
+      <a name="label" val="n48" />
+      <a name="width" val="32" />
+      <a name="facing" val="west" />
+    </comp>
+    <comp lib="0" name="Constant" loc="(180,1000)">
+      <a name="width" val="1" />
+      <a name="value" val="0x0" />
+    </comp>
+    <wire from="(180,1000)" to="(220,1000)" />
+    <comp lib="0" name="Tunnel" loc="(220,1000)">
+      <a name="label" val="n50" />
+      <a name="width" val="1" />
+      <a name="facing" val="west" />
+    </comp>
+    <comp lib="3" name="Adder" loc="(700,1000)">
+      <a name="width" val="32" />
+    </comp>
+    <wire from="(660,990)" to="(620,990)" />
+    <comp lib="0" name="Tunnel" loc="(620,990)">
+      <a name="label" val="PC" />
+      <a name="width" val="32" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(660,1010)" to="(620,1010)" />
+    <comp lib="0" name="Tunnel" loc="(620,1010)">
+      <a name="label" val="n48" />
+      <a name="width" val="32" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(680,980)" to="(640,980)" />
+    <comp lib="0" name="Tunnel" loc="(640,980)">
+      <a name="label" val="n50" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(700,1000)" to="(740,1000)" />
+    <comp lib="0" name="Tunnel" loc="(740,1000)">
+      <a name="label" val="n49" />
+      <a name="width" val="32" />
+      <a name="facing" val="west" />
+    </comp>
+    <comp lib="0" name="Constant" loc="(1220,1000)">
+      <a name="width" val="32" />
+      <a name="value" val="0xfffffffe" />
+    </comp>
+    <wire from="(1220,1000)" to="(1260,1000)" />
+    <comp lib="0" name="Tunnel" loc="(1260,1000)">
+      <a name="label" val="n51" />
+      <a name="width" val="32" />
+      <a name="facing" val="west" />
+    </comp>
+    <comp lib="1" name="AND Gate" loc="(1740,1000)">
+      <a name="size" val="30" />
+      <a name="width" val="32" />
+      <a name="inputs" val="2" />
+    </comp>
+    <wire from="(1740,1000)" to="(1780,1000)" />
+    <comp lib="0" name="Tunnel" loc="(1780,1000)">
+      <a name="label" val="n52" />
+      <a name="width" val="32" />
+      <a name="facing" val="west" />
+    </comp>
+    <wire from="(1710,990)" to="(1670,990)" />
+    <comp lib="0" name="Tunnel" loc="(1670,990)">
+      <a name="label" val="n46" />
+      <a name="width" val="32" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(1710,1010)" to="(1670,1010)" />
+    <comp lib="0" name="Tunnel" loc="(1670,1010)">
+      <a name="label" val="n51" />
+      <a name="width" val="32" />
+      <a name="facing" val="east" />
+    </comp>
+    <comp lib="0" name="Splitter" loc="(2260,1000)">
+      <a name="incoming" val="32" />
+      <a name="fanout" val="2" />
+      <a name="appear" val="right" />
+      <a name="facing" val="east" />
+      <a name="bit0" val="0" />
+      <a name="bit1" val="0" />
+      <a name="bit2" val="1" />
+      <a name="bit3" val="1" />
+      <a name="bit4" val="1" />
+      <a name="bit5" val="1" />
+      <a name="bit6" val="1" />
+      <a name="bit7" val="1" />
+      <a name="bit8" val="1" />
+      <a name="bit9" val="1" />
+      <a name="bit10" val="1" />
+      <a name="bit11" val="1" />
+      <a name="bit12" val="1" />
+      <a name="bit13" val="1" />
+      <a name="bit14" val="1" />
+      <a name="bit15" val="1" />
+      <a name="bit16" val="1" />
+      <a name="bit17" val="1" />
+      <a name="bit18" val="1" />
+      <a name="bit19" val="1" />
+      <a name="bit20" val="1" />
+      <a name="bit21" val="1" />
+      <a name="bit22" val="1" />
+      <a name="bit23" val="1" />
+      <a name="bit24" val="1" />
+      <a name="bit25" val="1" />
+      <a name="bit26" val="1" />
+      <a name="bit27" val="1" />
+      <a name="bit28" val="1" />
+      <a name="bit29" val="1" />
+      <a name="bit30" val="1" />
+      <a name="bit31" val="1" />
+    </comp>
+    <wire from="(2260,1000)" to="(2300,1000)" />
+    <comp lib="0" name="Tunnel" loc="(2300,1000)">
+      <a name="label" val="n52" />
+      <a name="width" val="32" />
+      <a name="facing" val="west" />
+    </comp>
+    <wire from="(2280,1010)" to="(2320,1010)" />
+    <comp lib="0" name="Tunnel" loc="(2320,1010)">
+      <a name="label" val="n53" />
+      <a name="width" val="2" />
+      <a name="facing" val="west" />
+    </comp>
+    <wire from="(2280,1020)" to="(2320,1020)" />
+    <comp lib="0" name="Tunnel" loc="(2320,1020)">
+      <a name="label" val="n54" />
+      <a name="width" val="30" />
+      <a name="facing" val="west" />
+    </comp>
+    <comp lib="0" name="Constant" loc="(2780,1000)">
+      <a name="width" val="2" />
+      <a name="value" val="0x0" />
+    </comp>
+    <wire from="(2780,1000)" to="(2820,1000)" />
+    <comp lib="0" name="Tunnel" loc="(2820,1000)">
+      <a name="label" val="n55" />
+      <a name="width" val="2" />
+      <a name="facing" val="west" />
+    </comp>
+    <comp lib="3" name="Comparator" loc="(180,1210)">
+      <a name="width" val="2" />
+      <a name="mode" val="unsigned" />
+    </comp>
+    <wire from="(140,1200)" to="(100,1200)" />
+    <comp lib="0" name="Tunnel" loc="(100,1200)">
+      <a name="label" val="n53" />
+      <a name="width" val="2" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(140,1220)" to="(100,1220)" />
+    <comp lib="0" name="Tunnel" loc="(100,1220)">
+      <a name="label" val="n55" />
+      <a name="width" val="2" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(180,1210)" to="(220,1210)" />
+    <comp lib="0" name="Tunnel" loc="(220,1210)">
+      <a name="label" val="n56" />
+      <a name="width" val="1" />
+      <a name="facing" val="west" />
+    </comp>
+    <comp lib="1" name="NOT Gate" loc="(700,1210)">
+      <a name="size" val="30" />
+      <a name="width" val="1" />
+    </comp>
+    <wire from="(700,1210)" to="(740,1210)" />
+    <comp lib="0" name="Tunnel" loc="(740,1210)">
+      <a name="label" val="n57" />
+      <a name="width" val="1" />
+      <a name="facing" val="west" />
+    </comp>
+    <wire from="(670,1210)" to="(630,1210)" />
+    <comp lib="0" name="Tunnel" loc="(630,1210)">
+      <a name="label" val="n38" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <comp lib="1" name="OR Gate" loc="(1220,1210)">
+      <a name="size" val="30" />
+      <a name="width" val="1" />
+      <a name="inputs" val="2" />
+    </comp>
+    <wire from="(1220,1210)" to="(1260,1210)" />
+    <comp lib="0" name="Tunnel" loc="(1260,1210)">
+      <a name="label" val="n58" />
+      <a name="width" val="1" />
+      <a name="facing" val="west" />
+    </comp>
+    <wire from="(1190,1200)" to="(1150,1200)" />
+    <comp lib="0" name="Tunnel" loc="(1150,1200)">
+      <a name="label" val="n57" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(1190,1220)" to="(1150,1220)" />
+    <comp lib="0" name="Tunnel" loc="(1150,1220)">
+      <a name="label" val="n56" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <comp lib="1" name="AND Gate" loc="(1740,1210)">
+      <a name="size" val="30" />
+      <a name="width" val="1" />
+      <a name="inputs" val="2" />
+    </comp>
+    <wire from="(1740,1210)" to="(1780,1210)" />
+    <comp lib="0" name="Tunnel" loc="(1780,1210)">
+      <a name="label" val="n59" />
+      <a name="width" val="1" />
+      <a name="facing" val="west" />
+    </comp>
+    <wire from="(1710,1200)" to="(1670,1200)" />
+    <comp lib="0" name="Tunnel" loc="(1670,1200)">
+      <a name="label" val="n43" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(1710,1220)" to="(1670,1220)" />
+    <comp lib="0" name="Tunnel" loc="(1670,1220)">
+      <a name="label" val="n58" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <comp lib="2" name="Multiplexer" loc="(2260,1210)">
+      <a name="width" val="32" />
+      <a name="select" val="1" />
+      <a name="enable" val="false" />
+      <a name="size" val="40" />
+    </comp>
+    <wire from="(2260,1210)" to="(2300,1210)" />
+    <comp lib="0" name="Tunnel" loc="(2300,1210)">
+      <a name="label" val="n60" />
+      <a name="width" val="32" />
+      <a name="facing" val="west" />
+    </comp>
+    <wire from="(2230,1200)" to="(2190,1200)" />
+    <comp lib="0" name="Tunnel" loc="(2190,1200)">
+      <a name="label" val="n46" />
+      <a name="width" val="32" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(2230,1220)" to="(2190,1220)" />
+    <comp lib="0" name="Tunnel" loc="(2190,1220)">
+      <a name="label" val="n49" />
+      <a name="width" val="32" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(2240,1230)" to="(2200,1230)" />
+    <comp lib="0" name="Tunnel" loc="(2200,1230)">
+      <a name="label" val="n38" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <comp lib="2" name="Multiplexer" loc="(2780,1210)">
+      <a name="width" val="32" />
+      <a name="select" val="1" />
+      <a name="enable" val="false" />
+      <a name="size" val="40" />
+    </comp>
+    <wire from="(2780,1210)" to="(2820,1210)" />
+    <comp lib="0" name="Tunnel" loc="(2820,1210)">
+      <a name="label" val="n61" />
+      <a name="width" val="32" />
+      <a name="facing" val="west" />
+    </comp>
+    <wire from="(2750,1200)" to="(2710,1200)" />
+    <comp lib="0" name="Tunnel" loc="(2710,1200)">
+      <a name="label" val="n49" />
+      <a name="width" val="32" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(2750,1220)" to="(2710,1220)" />
+    <comp lib="0" name="Tunnel" loc="(2710,1220)">
+      <a name="label" val="n52" />
+      <a name="width" val="32" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(2760,1230)" to="(2720,1230)" />
+    <comp lib="0" name="Tunnel" loc="(2720,1230)">
+      <a name="label" val="n38" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <comp lib="4" name="Register" loc="(180,1420)">
+      <a name="width" val="32" />
+      <a name="appearance" val="classic" />
+      <a name="label" val="PC" />
+    </comp>
+    <wire from="(180,1420)" to="(220,1420)" />
+    <comp lib="0" name="Tunnel" loc="(220,1420)">
+      <a name="label" val="PC" />
+      <a name="width" val="32" />
+      <a name="facing" val="west" />
+    </comp>
+    <wire from="(150,1420)" to="(110,1420)" />
+    <comp lib="0" name="Tunnel" loc="(110,1420)">
+      <a name="label" val="n61" />
+      <a name="width" val="32" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(150,1430)" to="(110,1430)" />
+    <comp lib="0" name="Tunnel" loc="(110,1430)">
+      <a name="label" val="n59" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(160,1440)" to="(160,1480)" />
+    <comp lib="0" name="Tunnel" loc="(160,1480)">
+      <a name="label" val="clock" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(170,1440)" to="(170,1520)" />
+    <comp lib="0" name="Tunnel" loc="(170,1520)">
+      <a name="label" val="Reset" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <comp lib="0" name="Constant" loc="(700,1420)">
+      <a name="width" val="4" />
+      <a name="value" val="0x1" />
+    </comp>
+    <wire from="(700,1420)" to="(740,1420)" />
+    <comp lib="0" name="Tunnel" loc="(740,1420)">
+      <a name="label" val="n63" />
+      <a name="width" val="4" />
+      <a name="facing" val="west" />
+    </comp>
+    <comp lib="3" name="Comparator" loc="(1220,1420)">
+      <a name="width" val="4" />
+      <a name="mode" val="unsigned" />
+    </comp>
+    <wire from="(1180,1410)" to="(1140,1410)" />
+    <comp lib="0" name="Tunnel" loc="(1140,1410)">
+      <a name="label" val="n29" />
+      <a name="width" val="4" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(1180,1430)" to="(1140,1430)" />
+    <comp lib="0" name="Tunnel" loc="(1140,1430)">
+      <a name="label" val="n63" />
+      <a name="width" val="4" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(1220,1420)" to="(1260,1420)" />
+    <comp lib="0" name="Tunnel" loc="(1260,1420)">
+      <a name="label" val="n64" />
+      <a name="width" val="1" />
+      <a name="facing" val="west" />
+    </comp>
+    <comp lib="1" name="AND Gate" loc="(1740,1420)">
+      <a name="size" val="30" />
+      <a name="width" val="1" />
+      <a name="inputs" val="2" />
+    </comp>
+    <wire from="(1740,1420)" to="(1780,1420)" />
+    <comp lib="0" name="Tunnel" loc="(1780,1420)">
+      <a name="label" val="n65" />
+      <a name="width" val="1" />
+      <a name="facing" val="west" />
+    </comp>
+    <wire from="(1710,1410)" to="(1670,1410)" />
+    <comp lib="0" name="Tunnel" loc="(1670,1410)">
+      <a name="label" val="n59" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(1710,1430)" to="(1670,1430)" />
+    <comp lib="0" name="Tunnel" loc="(1670,1430)">
+      <a name="label" val="n64" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <comp lib="4" name="Register" loc="(2260,1420)">
+      <a name="width" val="32" />
+      <a name="appearance" val="classic" />
+      <a name="label" val="x1" />
+    </comp>
+    <wire from="(2260,1420)" to="(2300,1420)" />
+    <comp lib="0" name="Tunnel" loc="(2300,1420)">
+      <a name="label" val="x1" />
+      <a name="width" val="32" />
+      <a name="facing" val="west" />
+    </comp>
+    <wire from="(2230,1420)" to="(2190,1420)" />
+    <comp lib="0" name="Tunnel" loc="(2190,1420)">
+      <a name="label" val="n60" />
+      <a name="width" val="32" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(2230,1430)" to="(2190,1430)" />
+    <comp lib="0" name="Tunnel" loc="(2190,1430)">
+      <a name="label" val="n65" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(2240,1440)" to="(2240,1480)" />
+    <comp lib="0" name="Tunnel" loc="(2240,1480)">
+      <a name="label" val="clock" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(2250,1440)" to="(2250,1520)" />
+    <comp lib="0" name="Tunnel" loc="(2250,1520)">
+      <a name="label" val="Reset" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <comp lib="0" name="Constant" loc="(2780,1420)">
+      <a name="width" val="4" />
+      <a name="value" val="0x2" />
+    </comp>
+    <wire from="(2780,1420)" to="(2820,1420)" />
+    <comp lib="0" name="Tunnel" loc="(2820,1420)">
+      <a name="label" val="n67" />
+      <a name="width" val="4" />
+      <a name="facing" val="west" />
+    </comp>
+    <comp lib="3" name="Comparator" loc="(180,1630)">
+      <a name="width" val="4" />
+      <a name="mode" val="unsigned" />
+    </comp>
+    <wire from="(140,1620)" to="(100,1620)" />
+    <comp lib="0" name="Tunnel" loc="(100,1620)">
+      <a name="label" val="n29" />
+      <a name="width" val="4" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(140,1640)" to="(100,1640)" />
+    <comp lib="0" name="Tunnel" loc="(100,1640)">
+      <a name="label" val="n67" />
+      <a name="width" val="4" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(180,1630)" to="(220,1630)" />
+    <comp lib="0" name="Tunnel" loc="(220,1630)">
+      <a name="label" val="n68" />
+      <a name="width" val="1" />
+      <a name="facing" val="west" />
+    </comp>
+    <comp lib="1" name="AND Gate" loc="(700,1630)">
+      <a name="size" val="30" />
+      <a name="width" val="1" />
+      <a name="inputs" val="2" />
+    </comp>
+    <wire from="(700,1630)" to="(740,1630)" />
+    <comp lib="0" name="Tunnel" loc="(740,1630)">
+      <a name="label" val="n69" />
+      <a name="width" val="1" />
+      <a name="facing" val="west" />
+    </comp>
+    <wire from="(670,1620)" to="(630,1620)" />
+    <comp lib="0" name="Tunnel" loc="(630,1620)">
+      <a name="label" val="n59" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(670,1640)" to="(630,1640)" />
+    <comp lib="0" name="Tunnel" loc="(630,1640)">
+      <a name="label" val="n68" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <comp lib="4" name="Register" loc="(1220,1630)">
+      <a name="width" val="32" />
+      <a name="appearance" val="classic" />
+      <a name="label" val="x2" />
+    </comp>
+    <wire from="(1220,1630)" to="(1260,1630)" />
+    <comp lib="0" name="Tunnel" loc="(1260,1630)">
+      <a name="label" val="x2" />
+      <a name="width" val="32" />
+      <a name="facing" val="west" />
+    </comp>
+    <wire from="(1190,1630)" to="(1150,1630)" />
+    <comp lib="0" name="Tunnel" loc="(1150,1630)">
+      <a name="label" val="n60" />
+      <a name="width" val="32" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(1190,1640)" to="(1150,1640)" />
+    <comp lib="0" name="Tunnel" loc="(1150,1640)">
+      <a name="label" val="n69" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(1200,1650)" to="(1200,1690)" />
+    <comp lib="0" name="Tunnel" loc="(1200,1690)">
+      <a name="label" val="clock" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(1210,1650)" to="(1210,1730)" />
+    <comp lib="0" name="Tunnel" loc="(1210,1730)">
+      <a name="label" val="Reset" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <comp lib="0" name="Constant" loc="(1740,1630)">
+      <a name="width" val="4" />
+      <a name="value" val="0x3" />
+    </comp>
+    <wire from="(1740,1630)" to="(1780,1630)" />
+    <comp lib="0" name="Tunnel" loc="(1780,1630)">
+      <a name="label" val="n71" />
+      <a name="width" val="4" />
+      <a name="facing" val="west" />
+    </comp>
+    <comp lib="3" name="Comparator" loc="(2260,1630)">
+      <a name="width" val="4" />
+      <a name="mode" val="unsigned" />
+    </comp>
+    <wire from="(2220,1620)" to="(2180,1620)" />
+    <comp lib="0" name="Tunnel" loc="(2180,1620)">
+      <a name="label" val="n29" />
+      <a name="width" val="4" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(2220,1640)" to="(2180,1640)" />
+    <comp lib="0" name="Tunnel" loc="(2180,1640)">
+      <a name="label" val="n71" />
+      <a name="width" val="4" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(2260,1630)" to="(2300,1630)" />
+    <comp lib="0" name="Tunnel" loc="(2300,1630)">
+      <a name="label" val="n72" />
+      <a name="width" val="1" />
+      <a name="facing" val="west" />
+    </comp>
+    <comp lib="1" name="AND Gate" loc="(2780,1630)">
+      <a name="size" val="30" />
+      <a name="width" val="1" />
+      <a name="inputs" val="2" />
+    </comp>
+    <wire from="(2780,1630)" to="(2820,1630)" />
+    <comp lib="0" name="Tunnel" loc="(2820,1630)">
+      <a name="label" val="n73" />
+      <a name="width" val="1" />
+      <a name="facing" val="west" />
+    </comp>
+    <wire from="(2750,1620)" to="(2710,1620)" />
+    <comp lib="0" name="Tunnel" loc="(2710,1620)">
+      <a name="label" val="n59" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(2750,1640)" to="(2710,1640)" />
+    <comp lib="0" name="Tunnel" loc="(2710,1640)">
+      <a name="label" val="n72" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <comp lib="4" name="Register" loc="(180,1840)">
+      <a name="width" val="32" />
+      <a name="appearance" val="classic" />
+      <a name="label" val="x3" />
+    </comp>
+    <wire from="(180,1840)" to="(220,1840)" />
+    <comp lib="0" name="Tunnel" loc="(220,1840)">
+      <a name="label" val="x3" />
+      <a name="width" val="32" />
+      <a name="facing" val="west" />
+    </comp>
+    <wire from="(150,1840)" to="(110,1840)" />
+    <comp lib="0" name="Tunnel" loc="(110,1840)">
+      <a name="label" val="n60" />
+      <a name="width" val="32" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(150,1850)" to="(110,1850)" />
+    <comp lib="0" name="Tunnel" loc="(110,1850)">
+      <a name="label" val="n73" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(160,1860)" to="(160,1900)" />
+    <comp lib="0" name="Tunnel" loc="(160,1900)">
+      <a name="label" val="clock" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(170,1860)" to="(170,1940)" />
+    <comp lib="0" name="Tunnel" loc="(170,1940)">
+      <a name="label" val="Reset" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <comp lib="0" name="Constant" loc="(700,1840)">
+      <a name="width" val="4" />
+      <a name="value" val="0x4" />
+    </comp>
+    <wire from="(700,1840)" to="(740,1840)" />
+    <comp lib="0" name="Tunnel" loc="(740,1840)">
+      <a name="label" val="n75" />
+      <a name="width" val="4" />
+      <a name="facing" val="west" />
+    </comp>
+    <comp lib="3" name="Comparator" loc="(1220,1840)">
+      <a name="width" val="4" />
+      <a name="mode" val="unsigned" />
+    </comp>
+    <wire from="(1180,1830)" to="(1140,1830)" />
+    <comp lib="0" name="Tunnel" loc="(1140,1830)">
+      <a name="label" val="n29" />
+      <a name="width" val="4" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(1180,1850)" to="(1140,1850)" />
+    <comp lib="0" name="Tunnel" loc="(1140,1850)">
+      <a name="label" val="n75" />
+      <a name="width" val="4" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(1220,1840)" to="(1260,1840)" />
+    <comp lib="0" name="Tunnel" loc="(1260,1840)">
+      <a name="label" val="n76" />
+      <a name="width" val="1" />
+      <a name="facing" val="west" />
+    </comp>
+    <comp lib="1" name="AND Gate" loc="(1740,1840)">
+      <a name="size" val="30" />
+      <a name="width" val="1" />
+      <a name="inputs" val="2" />
+    </comp>
+    <wire from="(1740,1840)" to="(1780,1840)" />
+    <comp lib="0" name="Tunnel" loc="(1780,1840)">
+      <a name="label" val="n77" />
+      <a name="width" val="1" />
+      <a name="facing" val="west" />
+    </comp>
+    <wire from="(1710,1830)" to="(1670,1830)" />
+    <comp lib="0" name="Tunnel" loc="(1670,1830)">
+      <a name="label" val="n59" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(1710,1850)" to="(1670,1850)" />
+    <comp lib="0" name="Tunnel" loc="(1670,1850)">
+      <a name="label" val="n76" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <comp lib="4" name="Register" loc="(2260,1840)">
+      <a name="width" val="32" />
+      <a name="appearance" val="classic" />
+      <a name="label" val="x4" />
+    </comp>
+    <wire from="(2260,1840)" to="(2300,1840)" />
+    <comp lib="0" name="Tunnel" loc="(2300,1840)">
+      <a name="label" val="x4" />
+      <a name="width" val="32" />
+      <a name="facing" val="west" />
+    </comp>
+    <wire from="(2230,1840)" to="(2190,1840)" />
+    <comp lib="0" name="Tunnel" loc="(2190,1840)">
+      <a name="label" val="n60" />
+      <a name="width" val="32" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(2230,1850)" to="(2190,1850)" />
+    <comp lib="0" name="Tunnel" loc="(2190,1850)">
+      <a name="label" val="n77" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(2240,1860)" to="(2240,1900)" />
+    <comp lib="0" name="Tunnel" loc="(2240,1900)">
+      <a name="label" val="clock" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(2250,1860)" to="(2250,1940)" />
+    <comp lib="0" name="Tunnel" loc="(2250,1940)">
+      <a name="label" val="Reset" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <comp lib="0" name="Constant" loc="(2780,1840)">
+      <a name="width" val="4" />
+      <a name="value" val="0x5" />
+    </comp>
+    <wire from="(2780,1840)" to="(2820,1840)" />
+    <comp lib="0" name="Tunnel" loc="(2820,1840)">
+      <a name="label" val="n79" />
+      <a name="width" val="4" />
+      <a name="facing" val="west" />
+    </comp>
+    <comp lib="3" name="Comparator" loc="(180,2050)">
+      <a name="width" val="4" />
+      <a name="mode" val="unsigned" />
+    </comp>
+    <wire from="(140,2040)" to="(100,2040)" />
+    <comp lib="0" name="Tunnel" loc="(100,2040)">
+      <a name="label" val="n29" />
+      <a name="width" val="4" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(140,2060)" to="(100,2060)" />
+    <comp lib="0" name="Tunnel" loc="(100,2060)">
+      <a name="label" val="n79" />
+      <a name="width" val="4" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(180,2050)" to="(220,2050)" />
+    <comp lib="0" name="Tunnel" loc="(220,2050)">
+      <a name="label" val="n80" />
+      <a name="width" val="1" />
+      <a name="facing" val="west" />
+    </comp>
+    <comp lib="1" name="AND Gate" loc="(700,2050)">
+      <a name="size" val="30" />
+      <a name="width" val="1" />
+      <a name="inputs" val="2" />
+    </comp>
+    <wire from="(700,2050)" to="(740,2050)" />
+    <comp lib="0" name="Tunnel" loc="(740,2050)">
+      <a name="label" val="n81" />
+      <a name="width" val="1" />
+      <a name="facing" val="west" />
+    </comp>
+    <wire from="(670,2040)" to="(630,2040)" />
+    <comp lib="0" name="Tunnel" loc="(630,2040)">
+      <a name="label" val="n59" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(670,2060)" to="(630,2060)" />
+    <comp lib="0" name="Tunnel" loc="(630,2060)">
+      <a name="label" val="n80" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <comp lib="4" name="Register" loc="(1220,2050)">
+      <a name="width" val="32" />
+      <a name="appearance" val="classic" />
+      <a name="label" val="x5" />
+    </comp>
+    <wire from="(1220,2050)" to="(1260,2050)" />
+    <comp lib="0" name="Tunnel" loc="(1260,2050)">
+      <a name="label" val="x5" />
+      <a name="width" val="32" />
+      <a name="facing" val="west" />
+    </comp>
+    <wire from="(1190,2050)" to="(1150,2050)" />
+    <comp lib="0" name="Tunnel" loc="(1150,2050)">
+      <a name="label" val="n60" />
+      <a name="width" val="32" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(1190,2060)" to="(1150,2060)" />
+    <comp lib="0" name="Tunnel" loc="(1150,2060)">
+      <a name="label" val="n81" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(1200,2070)" to="(1200,2110)" />
+    <comp lib="0" name="Tunnel" loc="(1200,2110)">
+      <a name="label" val="clock" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(1210,2070)" to="(1210,2150)" />
+    <comp lib="0" name="Tunnel" loc="(1210,2150)">
+      <a name="label" val="Reset" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <comp lib="0" name="Constant" loc="(1740,2050)">
+      <a name="width" val="4" />
+      <a name="value" val="0x6" />
+    </comp>
+    <wire from="(1740,2050)" to="(1780,2050)" />
+    <comp lib="0" name="Tunnel" loc="(1780,2050)">
+      <a name="label" val="n83" />
+      <a name="width" val="4" />
+      <a name="facing" val="west" />
+    </comp>
+    <comp lib="3" name="Comparator" loc="(2260,2050)">
+      <a name="width" val="4" />
+      <a name="mode" val="unsigned" />
+    </comp>
+    <wire from="(2220,2040)" to="(2180,2040)" />
+    <comp lib="0" name="Tunnel" loc="(2180,2040)">
+      <a name="label" val="n29" />
+      <a name="width" val="4" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(2220,2060)" to="(2180,2060)" />
+    <comp lib="0" name="Tunnel" loc="(2180,2060)">
+      <a name="label" val="n83" />
+      <a name="width" val="4" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(2260,2050)" to="(2300,2050)" />
+    <comp lib="0" name="Tunnel" loc="(2300,2050)">
+      <a name="label" val="n84" />
+      <a name="width" val="1" />
+      <a name="facing" val="west" />
+    </comp>
+    <comp lib="1" name="AND Gate" loc="(2780,2050)">
+      <a name="size" val="30" />
+      <a name="width" val="1" />
+      <a name="inputs" val="2" />
+    </comp>
+    <wire from="(2780,2050)" to="(2820,2050)" />
+    <comp lib="0" name="Tunnel" loc="(2820,2050)">
+      <a name="label" val="n85" />
+      <a name="width" val="1" />
+      <a name="facing" val="west" />
+    </comp>
+    <wire from="(2750,2040)" to="(2710,2040)" />
+    <comp lib="0" name="Tunnel" loc="(2710,2040)">
+      <a name="label" val="n59" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(2750,2060)" to="(2710,2060)" />
+    <comp lib="0" name="Tunnel" loc="(2710,2060)">
+      <a name="label" val="n84" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <comp lib="4" name="Register" loc="(180,2260)">
+      <a name="width" val="32" />
+      <a name="appearance" val="classic" />
+      <a name="label" val="x6" />
+    </comp>
+    <wire from="(180,2260)" to="(220,2260)" />
+    <comp lib="0" name="Tunnel" loc="(220,2260)">
+      <a name="label" val="x6" />
+      <a name="width" val="32" />
+      <a name="facing" val="west" />
+    </comp>
+    <wire from="(150,2260)" to="(110,2260)" />
+    <comp lib="0" name="Tunnel" loc="(110,2260)">
+      <a name="label" val="n60" />
+      <a name="width" val="32" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(150,2270)" to="(110,2270)" />
+    <comp lib="0" name="Tunnel" loc="(110,2270)">
+      <a name="label" val="n85" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(160,2280)" to="(160,2320)" />
+    <comp lib="0" name="Tunnel" loc="(160,2320)">
+      <a name="label" val="clock" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(170,2280)" to="(170,2360)" />
+    <comp lib="0" name="Tunnel" loc="(170,2360)">
+      <a name="label" val="Reset" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <comp lib="0" name="Constant" loc="(700,2260)">
+      <a name="width" val="4" />
+      <a name="value" val="0x7" />
+    </comp>
+    <wire from="(700,2260)" to="(740,2260)" />
+    <comp lib="0" name="Tunnel" loc="(740,2260)">
+      <a name="label" val="n87" />
+      <a name="width" val="4" />
+      <a name="facing" val="west" />
+    </comp>
+    <comp lib="3" name="Comparator" loc="(1220,2260)">
+      <a name="width" val="4" />
+      <a name="mode" val="unsigned" />
+    </comp>
+    <wire from="(1180,2250)" to="(1140,2250)" />
+    <comp lib="0" name="Tunnel" loc="(1140,2250)">
+      <a name="label" val="n29" />
+      <a name="width" val="4" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(1180,2270)" to="(1140,2270)" />
+    <comp lib="0" name="Tunnel" loc="(1140,2270)">
+      <a name="label" val="n87" />
+      <a name="width" val="4" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(1220,2260)" to="(1260,2260)" />
+    <comp lib="0" name="Tunnel" loc="(1260,2260)">
+      <a name="label" val="n88" />
+      <a name="width" val="1" />
+      <a name="facing" val="west" />
+    </comp>
+    <comp lib="1" name="AND Gate" loc="(1740,2260)">
+      <a name="size" val="30" />
+      <a name="width" val="1" />
+      <a name="inputs" val="2" />
+    </comp>
+    <wire from="(1740,2260)" to="(1780,2260)" />
+    <comp lib="0" name="Tunnel" loc="(1780,2260)">
+      <a name="label" val="n89" />
+      <a name="width" val="1" />
+      <a name="facing" val="west" />
+    </comp>
+    <wire from="(1710,2250)" to="(1670,2250)" />
+    <comp lib="0" name="Tunnel" loc="(1670,2250)">
+      <a name="label" val="n59" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(1710,2270)" to="(1670,2270)" />
+    <comp lib="0" name="Tunnel" loc="(1670,2270)">
+      <a name="label" val="n88" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <comp lib="4" name="Register" loc="(2260,2260)">
+      <a name="width" val="32" />
+      <a name="appearance" val="classic" />
+      <a name="label" val="x7" />
+    </comp>
+    <wire from="(2260,2260)" to="(2300,2260)" />
+    <comp lib="0" name="Tunnel" loc="(2300,2260)">
+      <a name="label" val="x7" />
+      <a name="width" val="32" />
+      <a name="facing" val="west" />
+    </comp>
+    <wire from="(2230,2260)" to="(2190,2260)" />
+    <comp lib="0" name="Tunnel" loc="(2190,2260)">
+      <a name="label" val="n60" />
+      <a name="width" val="32" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(2230,2270)" to="(2190,2270)" />
+    <comp lib="0" name="Tunnel" loc="(2190,2270)">
+      <a name="label" val="n89" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(2240,2280)" to="(2240,2320)" />
+    <comp lib="0" name="Tunnel" loc="(2240,2320)">
+      <a name="label" val="clock" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(2250,2280)" to="(2250,2360)" />
+    <comp lib="0" name="Tunnel" loc="(2250,2360)">
+      <a name="label" val="Reset" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <comp lib="0" name="Constant" loc="(2780,2260)">
+      <a name="width" val="4" />
+      <a name="value" val="0x8" />
+    </comp>
+    <wire from="(2780,2260)" to="(2820,2260)" />
+    <comp lib="0" name="Tunnel" loc="(2820,2260)">
+      <a name="label" val="n91" />
+      <a name="width" val="4" />
+      <a name="facing" val="west" />
+    </comp>
+    <comp lib="3" name="Comparator" loc="(180,2470)">
+      <a name="width" val="4" />
+      <a name="mode" val="unsigned" />
+    </comp>
+    <wire from="(140,2460)" to="(100,2460)" />
+    <comp lib="0" name="Tunnel" loc="(100,2460)">
+      <a name="label" val="n29" />
+      <a name="width" val="4" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(140,2480)" to="(100,2480)" />
+    <comp lib="0" name="Tunnel" loc="(100,2480)">
+      <a name="label" val="n91" />
+      <a name="width" val="4" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(180,2470)" to="(220,2470)" />
+    <comp lib="0" name="Tunnel" loc="(220,2470)">
+      <a name="label" val="n92" />
+      <a name="width" val="1" />
+      <a name="facing" val="west" />
+    </comp>
+    <comp lib="1" name="AND Gate" loc="(700,2470)">
+      <a name="size" val="30" />
+      <a name="width" val="1" />
+      <a name="inputs" val="2" />
+    </comp>
+    <wire from="(700,2470)" to="(740,2470)" />
+    <comp lib="0" name="Tunnel" loc="(740,2470)">
+      <a name="label" val="n93" />
+      <a name="width" val="1" />
+      <a name="facing" val="west" />
+    </comp>
+    <wire from="(670,2460)" to="(630,2460)" />
+    <comp lib="0" name="Tunnel" loc="(630,2460)">
+      <a name="label" val="n59" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(670,2480)" to="(630,2480)" />
+    <comp lib="0" name="Tunnel" loc="(630,2480)">
+      <a name="label" val="n92" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <comp lib="4" name="Register" loc="(1220,2470)">
+      <a name="width" val="32" />
+      <a name="appearance" val="classic" />
+      <a name="label" val="x8" />
+    </comp>
+    <wire from="(1220,2470)" to="(1260,2470)" />
+    <comp lib="0" name="Tunnel" loc="(1260,2470)">
+      <a name="label" val="x8" />
+      <a name="width" val="32" />
+      <a name="facing" val="west" />
+    </comp>
+    <wire from="(1190,2470)" to="(1150,2470)" />
+    <comp lib="0" name="Tunnel" loc="(1150,2470)">
+      <a name="label" val="n60" />
+      <a name="width" val="32" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(1190,2480)" to="(1150,2480)" />
+    <comp lib="0" name="Tunnel" loc="(1150,2480)">
+      <a name="label" val="n93" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(1200,2490)" to="(1200,2530)" />
+    <comp lib="0" name="Tunnel" loc="(1200,2530)">
+      <a name="label" val="clock" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(1210,2490)" to="(1210,2570)" />
+    <comp lib="0" name="Tunnel" loc="(1210,2570)">
+      <a name="label" val="Reset" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <comp lib="0" name="Constant" loc="(1740,2470)">
+      <a name="width" val="4" />
+      <a name="value" val="0x9" />
+    </comp>
+    <wire from="(1740,2470)" to="(1780,2470)" />
+    <comp lib="0" name="Tunnel" loc="(1780,2470)">
+      <a name="label" val="n95" />
+      <a name="width" val="4" />
+      <a name="facing" val="west" />
+    </comp>
+    <comp lib="3" name="Comparator" loc="(2260,2470)">
+      <a name="width" val="4" />
+      <a name="mode" val="unsigned" />
+    </comp>
+    <wire from="(2220,2460)" to="(2180,2460)" />
+    <comp lib="0" name="Tunnel" loc="(2180,2460)">
+      <a name="label" val="n29" />
+      <a name="width" val="4" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(2220,2480)" to="(2180,2480)" />
+    <comp lib="0" name="Tunnel" loc="(2180,2480)">
+      <a name="label" val="n95" />
+      <a name="width" val="4" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(2260,2470)" to="(2300,2470)" />
+    <comp lib="0" name="Tunnel" loc="(2300,2470)">
+      <a name="label" val="n96" />
+      <a name="width" val="1" />
+      <a name="facing" val="west" />
+    </comp>
+    <comp lib="1" name="AND Gate" loc="(2780,2470)">
+      <a name="size" val="30" />
+      <a name="width" val="1" />
+      <a name="inputs" val="2" />
+    </comp>
+    <wire from="(2780,2470)" to="(2820,2470)" />
+    <comp lib="0" name="Tunnel" loc="(2820,2470)">
+      <a name="label" val="n97" />
+      <a name="width" val="1" />
+      <a name="facing" val="west" />
+    </comp>
+    <wire from="(2750,2460)" to="(2710,2460)" />
+    <comp lib="0" name="Tunnel" loc="(2710,2460)">
+      <a name="label" val="n59" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(2750,2480)" to="(2710,2480)" />
+    <comp lib="0" name="Tunnel" loc="(2710,2480)">
+      <a name="label" val="n96" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <comp lib="4" name="Register" loc="(180,2680)">
+      <a name="width" val="32" />
+      <a name="appearance" val="classic" />
+      <a name="label" val="x9" />
+    </comp>
+    <wire from="(180,2680)" to="(220,2680)" />
+    <comp lib="0" name="Tunnel" loc="(220,2680)">
+      <a name="label" val="x9" />
+      <a name="width" val="32" />
+      <a name="facing" val="west" />
+    </comp>
+    <wire from="(150,2680)" to="(110,2680)" />
+    <comp lib="0" name="Tunnel" loc="(110,2680)">
+      <a name="label" val="n60" />
+      <a name="width" val="32" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(150,2690)" to="(110,2690)" />
+    <comp lib="0" name="Tunnel" loc="(110,2690)">
+      <a name="label" val="n97" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(160,2700)" to="(160,2740)" />
+    <comp lib="0" name="Tunnel" loc="(160,2740)">
+      <a name="label" val="clock" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(170,2700)" to="(170,2780)" />
+    <comp lib="0" name="Tunnel" loc="(170,2780)">
+      <a name="label" val="Reset" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <comp lib="0" name="Constant" loc="(700,2680)">
+      <a name="width" val="4" />
+      <a name="value" val="0xa" />
+    </comp>
+    <wire from="(700,2680)" to="(740,2680)" />
+    <comp lib="0" name="Tunnel" loc="(740,2680)">
+      <a name="label" val="n99" />
+      <a name="width" val="4" />
+      <a name="facing" val="west" />
+    </comp>
+    <comp lib="3" name="Comparator" loc="(1220,2680)">
+      <a name="width" val="4" />
+      <a name="mode" val="unsigned" />
+    </comp>
+    <wire from="(1180,2670)" to="(1140,2670)" />
+    <comp lib="0" name="Tunnel" loc="(1140,2670)">
+      <a name="label" val="n29" />
+      <a name="width" val="4" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(1180,2690)" to="(1140,2690)" />
+    <comp lib="0" name="Tunnel" loc="(1140,2690)">
+      <a name="label" val="n99" />
+      <a name="width" val="4" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(1220,2680)" to="(1260,2680)" />
+    <comp lib="0" name="Tunnel" loc="(1260,2680)">
+      <a name="label" val="n100" />
+      <a name="width" val="1" />
+      <a name="facing" val="west" />
+    </comp>
+    <comp lib="1" name="AND Gate" loc="(1740,2680)">
+      <a name="size" val="30" />
+      <a name="width" val="1" />
+      <a name="inputs" val="2" />
+    </comp>
+    <wire from="(1740,2680)" to="(1780,2680)" />
+    <comp lib="0" name="Tunnel" loc="(1780,2680)">
+      <a name="label" val="n101" />
+      <a name="width" val="1" />
+      <a name="facing" val="west" />
+    </comp>
+    <wire from="(1710,2670)" to="(1670,2670)" />
+    <comp lib="0" name="Tunnel" loc="(1670,2670)">
+      <a name="label" val="n59" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(1710,2690)" to="(1670,2690)" />
+    <comp lib="0" name="Tunnel" loc="(1670,2690)">
+      <a name="label" val="n100" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <comp lib="4" name="Register" loc="(2260,2680)">
+      <a name="width" val="32" />
+      <a name="appearance" val="classic" />
+      <a name="label" val="x10" />
+    </comp>
+    <wire from="(2260,2680)" to="(2300,2680)" />
+    <comp lib="0" name="Tunnel" loc="(2300,2680)">
+      <a name="label" val="x10" />
+      <a name="width" val="32" />
+      <a name="facing" val="west" />
+    </comp>
+    <wire from="(2230,2680)" to="(2190,2680)" />
+    <comp lib="0" name="Tunnel" loc="(2190,2680)">
+      <a name="label" val="n60" />
+      <a name="width" val="32" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(2230,2690)" to="(2190,2690)" />
+    <comp lib="0" name="Tunnel" loc="(2190,2690)">
+      <a name="label" val="n101" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(2240,2700)" to="(2240,2740)" />
+    <comp lib="0" name="Tunnel" loc="(2240,2740)">
+      <a name="label" val="clock" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(2250,2700)" to="(2250,2780)" />
+    <comp lib="0" name="Tunnel" loc="(2250,2780)">
+      <a name="label" val="Reset" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <comp lib="0" name="Constant" loc="(2780,2680)">
+      <a name="width" val="4" />
+      <a name="value" val="0xb" />
+    </comp>
+    <wire from="(2780,2680)" to="(2820,2680)" />
+    <comp lib="0" name="Tunnel" loc="(2820,2680)">
+      <a name="label" val="n103" />
+      <a name="width" val="4" />
+      <a name="facing" val="west" />
+    </comp>
+    <comp lib="3" name="Comparator" loc="(180,2890)">
+      <a name="width" val="4" />
+      <a name="mode" val="unsigned" />
+    </comp>
+    <wire from="(140,2880)" to="(100,2880)" />
+    <comp lib="0" name="Tunnel" loc="(100,2880)">
+      <a name="label" val="n29" />
+      <a name="width" val="4" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(140,2900)" to="(100,2900)" />
+    <comp lib="0" name="Tunnel" loc="(100,2900)">
+      <a name="label" val="n103" />
+      <a name="width" val="4" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(180,2890)" to="(220,2890)" />
+    <comp lib="0" name="Tunnel" loc="(220,2890)">
+      <a name="label" val="n104" />
+      <a name="width" val="1" />
+      <a name="facing" val="west" />
+    </comp>
+    <comp lib="1" name="AND Gate" loc="(700,2890)">
+      <a name="size" val="30" />
+      <a name="width" val="1" />
+      <a name="inputs" val="2" />
+    </comp>
+    <wire from="(700,2890)" to="(740,2890)" />
+    <comp lib="0" name="Tunnel" loc="(740,2890)">
+      <a name="label" val="n105" />
+      <a name="width" val="1" />
+      <a name="facing" val="west" />
+    </comp>
+    <wire from="(670,2880)" to="(630,2880)" />
+    <comp lib="0" name="Tunnel" loc="(630,2880)">
+      <a name="label" val="n59" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(670,2900)" to="(630,2900)" />
+    <comp lib="0" name="Tunnel" loc="(630,2900)">
+      <a name="label" val="n104" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <comp lib="4" name="Register" loc="(1220,2890)">
+      <a name="width" val="32" />
+      <a name="appearance" val="classic" />
+      <a name="label" val="x11" />
+    </comp>
+    <wire from="(1220,2890)" to="(1260,2890)" />
+    <comp lib="0" name="Tunnel" loc="(1260,2890)">
+      <a name="label" val="x11" />
+      <a name="width" val="32" />
+      <a name="facing" val="west" />
+    </comp>
+    <wire from="(1190,2890)" to="(1150,2890)" />
+    <comp lib="0" name="Tunnel" loc="(1150,2890)">
+      <a name="label" val="n60" />
+      <a name="width" val="32" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(1190,2900)" to="(1150,2900)" />
+    <comp lib="0" name="Tunnel" loc="(1150,2900)">
+      <a name="label" val="n105" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(1200,2910)" to="(1200,2950)" />
+    <comp lib="0" name="Tunnel" loc="(1200,2950)">
+      <a name="label" val="clock" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(1210,2910)" to="(1210,2990)" />
+    <comp lib="0" name="Tunnel" loc="(1210,2990)">
+      <a name="label" val="Reset" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <comp lib="0" name="Constant" loc="(1740,2890)">
+      <a name="width" val="4" />
+      <a name="value" val="0xc" />
+    </comp>
+    <wire from="(1740,2890)" to="(1780,2890)" />
+    <comp lib="0" name="Tunnel" loc="(1780,2890)">
+      <a name="label" val="n107" />
+      <a name="width" val="4" />
+      <a name="facing" val="west" />
+    </comp>
+    <comp lib="3" name="Comparator" loc="(2260,2890)">
+      <a name="width" val="4" />
+      <a name="mode" val="unsigned" />
+    </comp>
+    <wire from="(2220,2880)" to="(2180,2880)" />
+    <comp lib="0" name="Tunnel" loc="(2180,2880)">
+      <a name="label" val="n29" />
+      <a name="width" val="4" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(2220,2900)" to="(2180,2900)" />
+    <comp lib="0" name="Tunnel" loc="(2180,2900)">
+      <a name="label" val="n107" />
+      <a name="width" val="4" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(2260,2890)" to="(2300,2890)" />
+    <comp lib="0" name="Tunnel" loc="(2300,2890)">
+      <a name="label" val="n108" />
+      <a name="width" val="1" />
+      <a name="facing" val="west" />
+    </comp>
+    <comp lib="1" name="AND Gate" loc="(2780,2890)">
+      <a name="size" val="30" />
+      <a name="width" val="1" />
+      <a name="inputs" val="2" />
+    </comp>
+    <wire from="(2780,2890)" to="(2820,2890)" />
+    <comp lib="0" name="Tunnel" loc="(2820,2890)">
+      <a name="label" val="n109" />
+      <a name="width" val="1" />
+      <a name="facing" val="west" />
+    </comp>
+    <wire from="(2750,2880)" to="(2710,2880)" />
+    <comp lib="0" name="Tunnel" loc="(2710,2880)">
+      <a name="label" val="n59" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(2750,2900)" to="(2710,2900)" />
+    <comp lib="0" name="Tunnel" loc="(2710,2900)">
+      <a name="label" val="n108" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <comp lib="4" name="Register" loc="(180,3100)">
+      <a name="width" val="32" />
+      <a name="appearance" val="classic" />
+      <a name="label" val="x12" />
+    </comp>
+    <wire from="(180,3100)" to="(220,3100)" />
+    <comp lib="0" name="Tunnel" loc="(220,3100)">
+      <a name="label" val="x12" />
+      <a name="width" val="32" />
+      <a name="facing" val="west" />
+    </comp>
+    <wire from="(150,3100)" to="(110,3100)" />
+    <comp lib="0" name="Tunnel" loc="(110,3100)">
+      <a name="label" val="n60" />
+      <a name="width" val="32" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(150,3110)" to="(110,3110)" />
+    <comp lib="0" name="Tunnel" loc="(110,3110)">
+      <a name="label" val="n109" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(160,3120)" to="(160,3160)" />
+    <comp lib="0" name="Tunnel" loc="(160,3160)">
+      <a name="label" val="clock" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(170,3120)" to="(170,3200)" />
+    <comp lib="0" name="Tunnel" loc="(170,3200)">
+      <a name="label" val="Reset" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <comp lib="0" name="Constant" loc="(700,3100)">
+      <a name="width" val="4" />
+      <a name="value" val="0xd" />
+    </comp>
+    <wire from="(700,3100)" to="(740,3100)" />
+    <comp lib="0" name="Tunnel" loc="(740,3100)">
+      <a name="label" val="n111" />
+      <a name="width" val="4" />
+      <a name="facing" val="west" />
+    </comp>
+    <comp lib="3" name="Comparator" loc="(1220,3100)">
+      <a name="width" val="4" />
+      <a name="mode" val="unsigned" />
+    </comp>
+    <wire from="(1180,3090)" to="(1140,3090)" />
+    <comp lib="0" name="Tunnel" loc="(1140,3090)">
+      <a name="label" val="n29" />
+      <a name="width" val="4" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(1180,3110)" to="(1140,3110)" />
+    <comp lib="0" name="Tunnel" loc="(1140,3110)">
+      <a name="label" val="n111" />
+      <a name="width" val="4" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(1220,3100)" to="(1260,3100)" />
+    <comp lib="0" name="Tunnel" loc="(1260,3100)">
+      <a name="label" val="n112" />
+      <a name="width" val="1" />
+      <a name="facing" val="west" />
+    </comp>
+    <comp lib="1" name="AND Gate" loc="(1740,3100)">
+      <a name="size" val="30" />
+      <a name="width" val="1" />
+      <a name="inputs" val="2" />
+    </comp>
+    <wire from="(1740,3100)" to="(1780,3100)" />
+    <comp lib="0" name="Tunnel" loc="(1780,3100)">
+      <a name="label" val="n113" />
+      <a name="width" val="1" />
+      <a name="facing" val="west" />
+    </comp>
+    <wire from="(1710,3090)" to="(1670,3090)" />
+    <comp lib="0" name="Tunnel" loc="(1670,3090)">
+      <a name="label" val="n59" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(1710,3110)" to="(1670,3110)" />
+    <comp lib="0" name="Tunnel" loc="(1670,3110)">
+      <a name="label" val="n112" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <comp lib="4" name="Register" loc="(2260,3100)">
+      <a name="width" val="32" />
+      <a name="appearance" val="classic" />
+      <a name="label" val="x13" />
+    </comp>
+    <wire from="(2260,3100)" to="(2300,3100)" />
+    <comp lib="0" name="Tunnel" loc="(2300,3100)">
+      <a name="label" val="x13" />
+      <a name="width" val="32" />
+      <a name="facing" val="west" />
+    </comp>
+    <wire from="(2230,3100)" to="(2190,3100)" />
+    <comp lib="0" name="Tunnel" loc="(2190,3100)">
+      <a name="label" val="n60" />
+      <a name="width" val="32" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(2230,3110)" to="(2190,3110)" />
+    <comp lib="0" name="Tunnel" loc="(2190,3110)">
+      <a name="label" val="n113" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(2240,3120)" to="(2240,3160)" />
+    <comp lib="0" name="Tunnel" loc="(2240,3160)">
+      <a name="label" val="clock" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(2250,3120)" to="(2250,3200)" />
+    <comp lib="0" name="Tunnel" loc="(2250,3200)">
+      <a name="label" val="Reset" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <comp lib="0" name="Constant" loc="(2780,3100)">
+      <a name="width" val="4" />
+      <a name="value" val="0xe" />
+    </comp>
+    <wire from="(2780,3100)" to="(2820,3100)" />
+    <comp lib="0" name="Tunnel" loc="(2820,3100)">
+      <a name="label" val="n115" />
+      <a name="width" val="4" />
+      <a name="facing" val="west" />
+    </comp>
+    <comp lib="3" name="Comparator" loc="(180,3310)">
+      <a name="width" val="4" />
+      <a name="mode" val="unsigned" />
+    </comp>
+    <wire from="(140,3300)" to="(100,3300)" />
+    <comp lib="0" name="Tunnel" loc="(100,3300)">
+      <a name="label" val="n29" />
+      <a name="width" val="4" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(140,3320)" to="(100,3320)" />
+    <comp lib="0" name="Tunnel" loc="(100,3320)">
+      <a name="label" val="n115" />
+      <a name="width" val="4" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(180,3310)" to="(220,3310)" />
+    <comp lib="0" name="Tunnel" loc="(220,3310)">
+      <a name="label" val="n116" />
+      <a name="width" val="1" />
+      <a name="facing" val="west" />
+    </comp>
+    <comp lib="1" name="AND Gate" loc="(700,3310)">
+      <a name="size" val="30" />
+      <a name="width" val="1" />
+      <a name="inputs" val="2" />
+    </comp>
+    <wire from="(700,3310)" to="(740,3310)" />
+    <comp lib="0" name="Tunnel" loc="(740,3310)">
+      <a name="label" val="n117" />
+      <a name="width" val="1" />
+      <a name="facing" val="west" />
+    </comp>
+    <wire from="(670,3300)" to="(630,3300)" />
+    <comp lib="0" name="Tunnel" loc="(630,3300)">
+      <a name="label" val="n59" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(670,3320)" to="(630,3320)" />
+    <comp lib="0" name="Tunnel" loc="(630,3320)">
+      <a name="label" val="n116" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <comp lib="4" name="Register" loc="(1220,3310)">
+      <a name="width" val="32" />
+      <a name="appearance" val="classic" />
+      <a name="label" val="x14" />
+    </comp>
+    <wire from="(1220,3310)" to="(1260,3310)" />
+    <comp lib="0" name="Tunnel" loc="(1260,3310)">
+      <a name="label" val="x14" />
+      <a name="width" val="32" />
+      <a name="facing" val="west" />
+    </comp>
+    <wire from="(1190,3310)" to="(1150,3310)" />
+    <comp lib="0" name="Tunnel" loc="(1150,3310)">
+      <a name="label" val="n60" />
+      <a name="width" val="32" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(1190,3320)" to="(1150,3320)" />
+    <comp lib="0" name="Tunnel" loc="(1150,3320)">
+      <a name="label" val="n117" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(1200,3330)" to="(1200,3370)" />
+    <comp lib="0" name="Tunnel" loc="(1200,3370)">
+      <a name="label" val="clock" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(1210,3330)" to="(1210,3410)" />
+    <comp lib="0" name="Tunnel" loc="(1210,3410)">
+      <a name="label" val="Reset" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <comp lib="0" name="Constant" loc="(1740,3310)">
+      <a name="width" val="4" />
+      <a name="value" val="0xf" />
+    </comp>
+    <wire from="(1740,3310)" to="(1780,3310)" />
+    <comp lib="0" name="Tunnel" loc="(1780,3310)">
+      <a name="label" val="n119" />
+      <a name="width" val="4" />
+      <a name="facing" val="west" />
+    </comp>
+    <comp lib="3" name="Comparator" loc="(2260,3310)">
+      <a name="width" val="4" />
+      <a name="mode" val="unsigned" />
+    </comp>
+    <wire from="(2220,3300)" to="(2180,3300)" />
+    <comp lib="0" name="Tunnel" loc="(2180,3300)">
+      <a name="label" val="n29" />
+      <a name="width" val="4" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(2220,3320)" to="(2180,3320)" />
+    <comp lib="0" name="Tunnel" loc="(2180,3320)">
+      <a name="label" val="n119" />
+      <a name="width" val="4" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(2260,3310)" to="(2300,3310)" />
+    <comp lib="0" name="Tunnel" loc="(2300,3310)">
+      <a name="label" val="n120" />
+      <a name="width" val="1" />
+      <a name="facing" val="west" />
+    </comp>
+    <comp lib="1" name="AND Gate" loc="(2780,3310)">
+      <a name="size" val="30" />
+      <a name="width" val="1" />
+      <a name="inputs" val="2" />
+    </comp>
+    <wire from="(2780,3310)" to="(2820,3310)" />
+    <comp lib="0" name="Tunnel" loc="(2820,3310)">
+      <a name="label" val="n121" />
+      <a name="width" val="1" />
+      <a name="facing" val="west" />
+    </comp>
+    <wire from="(2750,3300)" to="(2710,3300)" />
+    <comp lib="0" name="Tunnel" loc="(2710,3300)">
+      <a name="label" val="n59" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(2750,3320)" to="(2710,3320)" />
+    <comp lib="0" name="Tunnel" loc="(2710,3320)">
+      <a name="label" val="n120" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <comp lib="4" name="Register" loc="(180,3520)">
+      <a name="width" val="32" />
+      <a name="appearance" val="classic" />
+      <a name="label" val="x15" />
+    </comp>
+    <wire from="(180,3520)" to="(220,3520)" />
+    <comp lib="0" name="Tunnel" loc="(220,3520)">
+      <a name="label" val="x15" />
+      <a name="width" val="32" />
+      <a name="facing" val="west" />
+    </comp>
+    <wire from="(150,3520)" to="(110,3520)" />
+    <comp lib="0" name="Tunnel" loc="(110,3520)">
+      <a name="label" val="n60" />
+      <a name="width" val="32" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(150,3530)" to="(110,3530)" />
+    <comp lib="0" name="Tunnel" loc="(110,3530)">
+      <a name="label" val="n121" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(160,3540)" to="(160,3580)" />
+    <comp lib="0" name="Tunnel" loc="(160,3580)">
+      <a name="label" val="clock" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(170,3540)" to="(170,3620)" />
+    <comp lib="0" name="Tunnel" loc="(170,3620)">
+      <a name="label" val="Reset" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <comp lib="0" name="Pin" loc="(700,3520)">
+      <a name="label" val="PC_out" />
+      <a name="width" val="32" />
+      <a name="tristate" val="false" />
+      <a name="output" val="true" />
+      <a name="facing" val="west" />
+    </comp>
+    <wire from="(700,3520)" to="(740,3520)" />
+    <comp lib="0" name="Tunnel" loc="(740,3520)">
+      <a name="label" val="PC" />
+      <a name="width" val="32" />
+      <a name="facing" val="west" />
+    </comp>
+    <comp lib="0" name="Pin" loc="(1220,3520)">
+      <a name="label" val="a0" />
+      <a name="width" val="32" />
+      <a name="tristate" val="false" />
+      <a name="output" val="true" />
+      <a name="facing" val="west" />
+    </comp>
+    <wire from="(1220,3520)" to="(1260,3520)" />
+    <comp lib="0" name="Tunnel" loc="(1260,3520)">
+      <a name="label" val="x10" />
+      <a name="width" val="32" />
+      <a name="facing" val="west" />
+    </comp>
+    <comp lib="0" name="Pin" loc="(1740,3520)">
+      <a name="label" val="ra" />
+      <a name="width" val="32" />
+      <a name="tristate" val="false" />
+      <a name="output" val="true" />
+      <a name="facing" val="west" />
+    </comp>
+    <wire from="(1740,3520)" to="(1780,3520)" />
+    <comp lib="0" name="Tunnel" loc="(1780,3520)">
+      <a name="label" val="x1" />
+      <a name="width" val="32" />
+      <a name="facing" val="west" />
+    </comp>
+    <comp lib="1" name="NOT Gate" loc="(2260,3520)">
+      <a name="size" val="30" />
+      <a name="width" val="1" />
+    </comp>
+    <wire from="(2260,3520)" to="(2300,3520)" />
+    <comp lib="0" name="Tunnel" loc="(2300,3520)">
+      <a name="label" val="n123" />
+      <a name="width" val="1" />
+      <a name="facing" val="west" />
+    </comp>
+    <wire from="(2230,3520)" to="(2190,3520)" />
+    <comp lib="0" name="Tunnel" loc="(2190,3520)">
+      <a name="label" val="n59" />
+      <a name="width" val="1" />
+      <a name="facing" val="east" />
+    </comp>
+    <comp lib="0" name="Pin" loc="(2780,3520)">
+      <a name="label" val="illegal" />
+      <a name="width" val="1" />
+      <a name="tristate" val="false" />
+      <a name="output" val="true" />
+      <a name="facing" val="west" />
+    </comp>
+    <wire from="(2780,3520)" to="(2820,3520)" />
+    <comp lib="0" name="Tunnel" loc="(2820,3520)">
+      <a name="label" val="n123" />
+      <a name="width" val="1" />
+      <a name="facing" val="west" />
+    </comp>
+    <comp lib="0" name="Pin" loc="(180,3730)">
+      <a name="label" val="x0_out" />
+      <a name="width" val="32" />
+      <a name="tristate" val="false" />
+      <a name="output" val="true" />
+      <a name="facing" val="west" />
+    </comp>
+    <wire from="(180,3730)" to="(220,3730)" />
+    <comp lib="0" name="Tunnel" loc="(220,3730)">
+      <a name="label" val="n3" />
+      <a name="width" val="32" />
+      <a name="facing" val="west" />
+    </comp>
+    <comp lib="0" name="Pin" loc="(700,3730)">
+      <a name="label" val="x2_out" />
+      <a name="width" val="32" />
+      <a name="tristate" val="false" />
+      <a name="output" val="true" />
+      <a name="facing" val="west" />
+    </comp>
+    <wire from="(700,3730)" to="(740,3730)" />
+    <comp lib="0" name="Tunnel" loc="(740,3730)">
+      <a name="label" val="x2" />
+      <a name="width" val="32" />
+      <a name="facing" val="west" />
+    </comp>
+    <comp lib="0" name="Pin" loc="(1220,3730)">
+      <a name="label" val="x3_out" />
+      <a name="width" val="32" />
+      <a name="tristate" val="false" />
+      <a name="output" val="true" />
+      <a name="facing" val="west" />
+    </comp>
+    <wire from="(1220,3730)" to="(1260,3730)" />
+    <comp lib="0" name="Tunnel" loc="(1260,3730)">
+      <a name="label" val="x3" />
+      <a name="width" val="32" />
+      <a name="facing" val="west" />
+    </comp>
+    <comp lib="0" name="Pin" loc="(1740,3730)">
+      <a name="label" val="x4_out" />
+      <a name="width" val="32" />
+      <a name="tristate" val="false" />
+      <a name="output" val="true" />
+      <a name="facing" val="west" />
+    </comp>
+    <wire from="(1740,3730)" to="(1780,3730)" />
+    <comp lib="0" name="Tunnel" loc="(1780,3730)">
+      <a name="label" val="x4" />
+      <a name="width" val="32" />
+      <a name="facing" val="west" />
+    </comp>
+    <comp lib="0" name="Pin" loc="(2260,3730)">
+      <a name="label" val="x5_out" />
+      <a name="width" val="32" />
+      <a name="tristate" val="false" />
+      <a name="output" val="true" />
+      <a name="facing" val="west" />
+    </comp>
+    <wire from="(2260,3730)" to="(2300,3730)" />
+    <comp lib="0" name="Tunnel" loc="(2300,3730)">
+      <a name="label" val="x5" />
+      <a name="width" val="32" />
+      <a name="facing" val="west" />
+    </comp>
+    <comp lib="0" name="Pin" loc="(2780,3730)">
+      <a name="label" val="x6_out" />
+      <a name="width" val="32" />
+      <a name="tristate" val="false" />
+      <a name="output" val="true" />
+      <a name="facing" val="west" />
+    </comp>
+    <wire from="(2780,3730)" to="(2820,3730)" />
+    <comp lib="0" name="Tunnel" loc="(2820,3730)">
+      <a name="label" val="x6" />
+      <a name="width" val="32" />
+      <a name="facing" val="west" />
+    </comp>
+    <comp lib="0" name="Constant" loc="(180,3940)">
+      <a name="width" val="32" />
+      <a name="value" val="0x1c" />
+    </comp>
+    <wire from="(180,3940)" to="(220,3940)" />
+    <comp lib="0" name="Tunnel" loc="(220,3940)">
+      <a name="label" val="n124" />
+      <a name="width" val="32" />
+      <a name="facing" val="west" />
+    </comp>
+    <comp lib="3" name="Comparator" loc="(700,3940)">
+      <a name="width" val="32" />
+      <a name="mode" val="unsigned" />
+    </comp>
+    <wire from="(660,3930)" to="(620,3930)" />
+    <comp lib="0" name="Tunnel" loc="(620,3930)">
+      <a name="label" val="PC" />
+      <a name="width" val="32" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(660,3950)" to="(620,3950)" />
+    <comp lib="0" name="Tunnel" loc="(620,3950)">
+      <a name="label" val="n124" />
+      <a name="width" val="32" />
+      <a name="facing" val="east" />
+    </comp>
+    <wire from="(700,3940)" to="(740,3940)" />
+    <comp lib="0" name="Tunnel" loc="(740,3940)">
+      <a name="label" val="n125" />
+      <a name="width" val="1" />
+      <a name="facing" val="west" />
+    </comp>
+    <comp lib="0" name="Pin" loc="(1220,3940)">
+      <a name="label" val="halt" />
+      <a name="width" val="1" />
+      <a name="tristate" val="false" />
+      <a name="output" val="true" />
+      <a name="facing" val="west" />
+    </comp>
+    <wire from="(1220,3940)" to="(1260,3940)" />
+    <comp lib="0" name="Tunnel" loc="(1260,3940)">
+      <a name="label" val="n125" />
+      <a name="width" val="1" />
+      <a name="facing" val="west" />
+    </comp>
+  </circuit>
+</project>
