@@ -1,6 +1,18 @@
 VERILATOR ?= verilator
 .PHONY: test test-logic test-sequential test-hdlbits
-test: test-logic test-sequential test-hdlbits
+test: test-logic test-sequential test-hdlbits test-week09 test-week11 test-pa1
+
+.PHONY: test-week11 test-pa1
+test-week11:
+	$(MAKE) -C npc test
+test-pa1:
+	$(MAKE) -C pa1 test
+
+.PHONY: test-week09
+test-week09:
+	mkdir -p build
+	$(VERILATOR) --binary --timing --assert -Wno-DECLFILENAME --top-module tb_week09 --Mdir build/week09 rtl/week09.sv tests/tb_week09.sv
+	./build/week09/Vtb_week09
 test-logic:
 	mkdir -p build
 	$(VERILATOR) --binary --timing --assert -Wno-DECLFILENAME -Wno-WIDTHEXPAND --top-module tb_logic --Mdir build/logic rtl/logic_blocks.sv tests/tb_logic.sv

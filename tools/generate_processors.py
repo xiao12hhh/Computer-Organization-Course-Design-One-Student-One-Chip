@@ -76,7 +76,8 @@ class Netlist:
         self.cell(4,'ROM',{'addrWidth':aw,'dataWidth':width,'appearance':'classic','contents':contents},[(0,10,address),(240,60,n)])
         return n
     def save(self):
-        E.indent(self.root); E.ElementTree(self.root).write(OUT/(self.name+'.circ'),encoding='utf-8',xml_declaration=True)
+        E.indent(self.root)
+        (OUT/(self.name+'.circ')).write_bytes(E.tostring(self.root,encoding='utf-8',xml_declaration=True))
 
 def clock(n):
     clk=n.new(1,'clock'); n.cell(0,'Clock',{},[(0,0,clk)])
@@ -139,5 +140,6 @@ def minirv2(edge_test=False):
     n.pin('halt',1,True,n.eq(pc,n.const(32,28 if edge_test else 12)))
     n.save()
 
-summation(); scpu(); minirv2(); minirv2(True)
-print('Generated sum10, scpu, and minirv2 Logisim datapaths.')
+if __name__ == '__main__':
+    summation(); scpu(); minirv2(); minirv2(True)
+    print('Generated sum10, scpu, and minirv2 Logisim datapaths.')

@@ -4,7 +4,7 @@
 
 ## 当前进度
 
-截至 2026-11-13：
+截至 2026-11-18：
 
 - 已安装 VMware 和 Ubuntu 22.04.5 LTS。
 - 已安装 Logisim-evolution，并完成第一个简单电路（学习者反馈；电路文件尚未归档）。
@@ -20,10 +20,14 @@
 - [环境配置和使用说明](docs/environment.md)
 - [学习进度日志](docs/progress.md)
 - [前八周实验内容、运行方法与验收范围](docs/weeks01-08.md)
+- [第 9–12 周实验、启动方式与验证范围](docs/weeks09-12.md)
+- [第 9–12 周补学路线](docs/study-weeks09-12.md)
 - [后续补学顺序](docs/study-next.md)
 - [本地验证结果](docs/test-results.md)
 
-电路位于 `logisim/`，硬件代码位于 `rtl/`，平台题目本地版本位于 `hdlbits/`，测试位于 `tests/`，虚拟板入口位于 `nvboard/`。
+第 9–12 周本地实现已追加：可切换进制的七段显示、移位器/LFSR/键盘实验、完整八指令 minirv、带输出的 RTL sCPU，以及实际 NEMU 框架中的简易调试器与表达式求值。官方 mem/sum 程序、RTL 差分测试和 NEMU 集成测试通过。学校 OJ 未验收；第 13 周监视点未包含。
+
+电路位于 `logisim/`，硬件代码位于 `rtl/`，平台题目本地版本位于 `hdlbits/`，测试位于 `tests/`，虚拟板入口位于 `nvboard/` 和 `nvboard-labs/`，独立 NPC 工程位于 `npc/`，NEMU 补丁和测试位于 `pa1/`。
 
 Ubuntu 在仓库目录执行 `make test`；Windows 按前八周说明生成测试向量，再运行 `python tools/test_logisim.py`。新实验已部署到 Ubuntu 的 `~/course-week8-work`。
 
