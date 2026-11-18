@@ -68,3 +68,16 @@ DEMO=0、1、2、3 分别构建为独立程序，并在 Ubuntu 桌面会话中�
 - 可复现配置脚本 `bash pa2/setup.sh` 在现有环境重新执行成功。
 
 复测命令：`make test-week13 test-week14`、`make -C pa1 test count`。详见 [第 13–14 周说明](weeks13-14.md)。本轮未改动早期 RTL/Logisim，也未重新声明其在线验收。
+# 第 15–16 周追加验证
+
+- RTL minirv 16 寄存器、八指令限制和访存边界检查通过；随机与定向测试逐指令对照独立 C 模型。
+- 原始 Logisim mem/sum 镜像移植 RTL，分别 5,763 / 5,883 条指令后 GOOD TRAP。
+- 36 个 AM CPU 测试通过（35 正常、1 预期错误）；38 个 RV32I 汇编测试转译后通过。未宣称 M 汇编或 riscv-arch-test 通过。
+- 串口、微秒计时、显存边缘裁剪、SDL 键盘按下/松开经过真实 AM/NEMU 链路验证。
+- 官方 rtc_test 输出第 1、2、3 秒后主动结束无限循环；官方 dummy 一键 make run 成功。
+- NPC 字符 NES：40 模拟帧/20 输出帧/5 个不同哈希，1,844,371,963 条 RTL 指令，GOOD TRAP。
+- NEMU 图形 NES：120 模拟帧/60 刷新/7 个不同哈希，GOOD TRAP；保存真实 SDL 截图。
+- PA2 链接实验：单头文件 dummy 31 个实体，两个暂定定义仍为 31 个；两个初始化定义出现预期重定义错误。
+- 第 13 周调试器与监视点回归通过；已有 RTL/Logisim 电路未修改。
+
+复现和实际记录见 [第 15–16 周说明](weeks15-16.md)。

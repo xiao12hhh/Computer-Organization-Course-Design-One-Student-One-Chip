@@ -1,6 +1,12 @@
 VERILATOR ?= verilator
 .PHONY: test test-logic test-sequential test-hdlbits
 .PHONY: test-week13 test-week14
+.PHONY: test-week15 test-week16
+test-week15:
+	$(MAKE) -C npc/minirv
+	bash -c 'source pa2/env.sh; python3 npc/minirv/test_core.py && python3 npc/minirv/test_logisim_images.py && python3 npc/minirv/test_am.py && python3 npc/minirv/test_riscv.py'
+test-week16:
+	bash -c 'source pa2/env.sh; python3 pa2/test_io.py && python3 npc/minirv/test_rtc.py && python3 pa2/test_games.py'
 test-week13:
 	python3 pa1/test_nemu.py
 	python3 pa1/test_watchpoints.py

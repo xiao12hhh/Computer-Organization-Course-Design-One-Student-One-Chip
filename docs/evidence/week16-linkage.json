@@ -1,0 +1,42 @@
+{
+  "dummy-common": {
+    "build_ok": true,
+    "dummy_entities": 31
+  },
+  "dummy-both-tentative": {
+    "build_ok": true,
+    "dummy_entities": 31
+  },
+  "dummy-both-initialized": {
+    "build_ok": false,
+    "diagnostic": "/tmp/course-linkage-65mgv6a6/nemu/include/debug.h:18:21: error: redefinition of \u2018dummy\u2019\n/tmp/course-linkage-65mgv6a6/nemu/include/debug.h:18:21: error: redefinition of \u2018dummy\u2019"
+  },
+  "fetch-no-static": {
+    "build_ok": true,
+    "dummy_entities": 0
+  },
+  "fetch-no-inline": {
+    "build_ok": true,
+    "dummy_entities": 0
+  },
+  "fetch-neither": {
+    "build_ok": false,
+    "diagnostic": "collect2: error: ld returned 1 exit status"
+  },
+  "two-tu-static-inline": {
+    "build_ok": true,
+    "diagnostic": ""
+  },
+  "two-tu-inline": {
+    "build_ok": false,
+    "diagnostic": "/usr/bin/ld: /tmp/ccTAcdM8.o: in function `main':\na.c:(.text+0xe): undefined reference to `plus'\n/usr/bin/ld: /tmp/ccI0Pc48.o: in function `other':\nb.c:(.text+0xe): undefined reference to `plus'\ncollect2: error: ld returned 1 exit status\n"
+  },
+  "two-tu-static": {
+    "build_ok": true,
+    "diagnostic": ""
+  },
+  "two-tu-external": {
+    "build_ok": false,
+    "diagnostic": "/usr/bin/ld: /tmp/ccpJfRk4.o: in function `plus':\nb.c:(.text+0x0): multiple definition of `plus'; /tmp/ccyikj2E.o:a.c:(.text+0x0): first defined here\ncollect2: error: ld returned 1 exit status\n"
+  }
+}
