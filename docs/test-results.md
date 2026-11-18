@@ -56,3 +56,15 @@ DEMO=0、1、2、3 分别构建为独立程序，并在 Ubuntu 桌面会话中�
 - 之前全部 RTL/C 回归仍通过。未重新声称学校 OJ 或 HDLBits 在线验收通过。
 
 复现命令与限制见 [第 9–12 周说明](weeks09-12.md)。详细运行日志位于本地 build/，编译产物不提交到仓库。
+
+# 2026-11-18：第 13–14 周追加验证
+
+- 真实 NEMU 监视点：寄存器/内存/PC、多点触发、32 槽池、删除复用、求值异常及终止状态保护通过。
+- 独立 Python 整数参考：38,602 例 RV32 运算和边界通过；UBSan 无报错。
+- klib 对照宿主 libc：9,080 例通过，包含内存重叠、字符串、格式化截断；UBSan 无报错。
+- 固定版本 AM cpu-tests：35 个正常用例 GOOD TRAP；wrong 必须 BAD TRAP 且非零退出，负例检查通过。
+- AM 示例实际交叉编译并运行，输出 `Week14 AM: sum=5050; strings/format PASS`，以 GOOD TRAP 结束。
+- PA1 原有表达式测试和 2,000 组随机 AST 对照仍通过。
+- 可复现配置脚本 `bash pa2/setup.sh` 在现有环境重新执行成功。
+
+复测命令：`make test-week13 test-week14`、`make -C pa1 test count`。详见 [第 13–14 周说明](weeks13-14.md)。本轮未改动早期 RTL/Logisim，也未重新声明其在线验收。

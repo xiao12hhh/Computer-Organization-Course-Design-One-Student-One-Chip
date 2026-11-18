@@ -1,4 +1,4 @@
-// PA1 week 12 commands; watchpoints intentionally belong to week 13.
+// PA1 debugger, including week 13 watchpoints.
 #include <isa.h>
 #include <cpu/cpu.h>
 #include <memory/paddr.h>
@@ -10,6 +10,9 @@
 static bool batch=false;
 void init_regex(void);
 void init_wp_pool(void);
+void course_watch_add(char *);
+void course_watch_delete(unsigned long);
+void course_watch_list(void);
 void sdb_set_batch_mode(void){batch=true;}
 void init_sdb(void){init_regex();init_wp_pool();}
 static char *skip(char *p){while(p && isspace((unsigned char)*p))++p;return p;}
@@ -20,7 +23,7 @@ static bool number(char **text,unsigned long *value) {
   if(errno || (*end && !isspace((unsigned char)*end)) || !*value)return false;
   *text=skip(end);return true;
 }
-static void help(void){puts("help      Show commands\nc         Continue\nq         Quit\nsi [N]    Step N instructions (default 1)\ninfo r    Registers\nx N EXPR  Read N 32-bit memory words\np EXPR    Evaluate unsigned RV32 expression");}
+static void help(void){puts("help      Show commands\nc         Continue\nq         Quit\nsi [N]    Step N instructions (default 1)\ninfo r    Registers\ninfo w    Watchpoints\nw EXPR    Watch an expression\nd N       Delete watchpoint N\nx N EXPR  Read N 32-bit memory words\np EXPR    Evaluate unsigned RV32 expression");}
 void sdb_mainloop(void) {
   if(batch){cpu_exec((uint64_t)-1);return;}
   for(;;) {
@@ -39,7 +42,15 @@ void sdb_mainloop(void) {
       else cpu_exec(n);
     } else if(!strcmp(cmd,"info")) {
       char *end=args+strlen(args);while(end>args && isspace((unsigned char)end[-1]))*--end=0;
-      if(!strcmp(args,"r"))isa_reg_display();else puts("usage: info r (watchpoints are week 13)");
+      if(!strcmp(args,"r"))isa_reg_display();
+      else if(!strcmp(args,"w"))course_watch_list();
+      else puts("usage: info r | info w");
+    } else if(!strcmp(cmd,"w")) {
+      course_watch_add(args);
+    } else if(!strcmp(cmd,"d")) {
+      char *end;errno=0;unsigned long id=strtoul(args,&end,10);
+      if(!isdigit((unsigned char)*args)||errno||*skip(end))puts("usage: d nonnegative-id");
+      else course_watch_delete(id);
     } else if(!strcmp(cmd,"p")) {
       bool ok;word_t value=expr(args,&ok);
       if(ok)printf("= %u (0x%08x)\n",value,value);else puts("Invalid expression");
@@ -55,4 +66,6 @@ void sdb_mainloop(void) {
     } else printf("Unknown command '%s'\n",cmd);
     free(line);
   }
+  if(nemu_state.state==NEMU_STOP || nemu_state.state==NEMU_RUNNING)
+    nemu_state.state=NEMU_QUIT;
 }
