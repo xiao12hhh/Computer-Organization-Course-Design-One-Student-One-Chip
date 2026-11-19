@@ -18,3 +18,4 @@ python3 pa2/prepare_litenes.py --mode char
 make -C build/litenes-char ARCH=minirv-npc image
 python3 pa2/prepare_litenes.py --mode graphics
 make -C build/litenes-graphics ARCH=riscv32-nemu image
+make -C build/litenes-graphics ARCH=native image

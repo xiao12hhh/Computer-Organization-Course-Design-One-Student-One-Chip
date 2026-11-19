@@ -27,6 +27,7 @@
 - [PA1 必答题参考与源码统计](docs/pa1-answers.md)
 - [第 15–16 周：RTL minirv、设备与马里奥](docs/weeks15-16.md)
 - [第 15–16 周补学路线](docs/study-weeks15-16.md)
+- [游戏速度优化与流畅试玩入口](docs/game-performance.md)
 - [PA2 必答题参考与链接实验](docs/pa2-answers.md)
 - [后续补学顺序](docs/study-next.md)
 - [本地验证结果](docs/test-results.md)

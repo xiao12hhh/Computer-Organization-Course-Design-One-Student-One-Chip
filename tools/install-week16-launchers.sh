@@ -11,5 +11,6 @@ done <<'EOF'
 Week15-NPC-Tests test
 Week16-Mario-Characters char
 Week16-Mario-NEMU graphics
+Week16-Mario-Fast fast
 Week16-RTC-Test rtc
 EOF

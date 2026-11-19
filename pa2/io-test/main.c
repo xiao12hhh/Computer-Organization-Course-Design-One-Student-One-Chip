@@ -11,6 +11,20 @@ int main(void){
   assert(*(volatile uint32_t *)0xa1000000==pixels[3]);
   io_write(AM_GPU_FBDRAW,399,299,pixels,2,2,true);
   assert(*(volatile uint32_t *)(0xa1000000+4*(400*300-1))==pixels[0]);
+  // Both sides clipped: retain the source stride when advancing a row.
+  static uint32_t wide[804];
+  for(int i=0;i<804;i++)wide[i]=i+1;
+  io_write(AM_GPU_FBDRAW,-1,10,wide,402,2,false);
+  volatile uint32_t *fb=(volatile uint32_t *)0xa1000000;
+  assert(fb[10*400]==2 && fb[10*400+399]==401);
+  assert(fb[11*400]==404 && fb[11*400+399]==803);
+  io_write(AM_GPU_FBDRAW,(-2147483647-1),0,pixels,2,2,false);
+  io_write(AM_GPU_FBDRAW,2147483647,0,pixels,2,2,false);
+  io_write(AM_GPU_FBDRAW,0,(-2147483647-1),pixels,2,2,false);
+  io_write(AM_GPU_FBDRAW,0,2147483647,pixels,2,2,false);
+  io_write(AM_GPU_FBDRAW,0,0,pixels,0,2,false);
+  io_write(AM_GPU_FBDRAW,0,0,pixels,2,-1,false);
+  assert(fb[0]==pixels[3] && fb[400*300-1]==pixels[0]);
   AM_INPUT_KEYBRD_T k=io_read(AM_INPUT_KEYBRD);
 #ifdef COURSE_KEY_TEST
   while(k.keycode==AM_KEY_NONE)k=io_read(AM_INPUT_KEYBRD);

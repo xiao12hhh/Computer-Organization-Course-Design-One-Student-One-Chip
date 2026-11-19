@@ -27,6 +27,7 @@ Ubuntu 桌面入口：
 - **Week15-NPC-Tests**：运行 RTL 核心检查。
 - **Week16-Mario-Characters**：在 RTL minirv 中持续运行字符版。八指令转译开销很大，本机标题画面需等待数分钟；Ctrl+C 退出。按课程当前阶段要求，此版没有键盘控制。
 - **Week16-Mario-NEMU**：NEMU 图形版；I 开始，WASD 方向，J/K 动作。请先点击游戏窗口使其获得焦点，关闭窗口退出。
+- **Week16-Mario-Fast**：同一份 LiteNES 编译为 Ubuntu 原生程序，提供流畅试玩；按键同上。它不经过 NEMU 或 RTL，不能替代课程验收。性能对比与复现见 [游戏性能记录](game-performance.md)。
 - **Week16-RTC-Test**：运行官方时钟测试，确认 1、2、3 秒输出后自动停止其无限循环。
 
 命令行入口：
@@ -34,7 +35,7 @@ Ubuntu 桌面入口：
 ```bash
 cd ~/course-week8-work
 bash tools/run-week16.sh char
-# 或：graphics / rtc / test
+# 或：graphics / fast / rtc / test
 ```
 
 ## 验证结果

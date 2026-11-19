@@ -6,9 +6,21 @@ void __am_gpu_status(AM_GPU_STATUS_T *s){s->ready=true;}
 void __am_gpu_fbdraw(AM_GPU_FBDRAW_T *c){
   volatile uint32_t *fb=(volatile uint32_t *)0xa1000000;
   const uint32_t *pixels=c->pixels;
-  for(int y=0;y<c->h;y++)for(int x=0;x<c->w;x++){
-    int64_t dx=(int64_t)c->x+x,dy=(int64_t)c->y+y;
-    if(dx>=0 && dx<width && dy>=0 && dy<height)fb[dy*width+dx]=pixels[(size_t)y*c->w+x];
+  // Clip once with wide arithmetic (including extreme signed coordinates).
+  // The inner copy then uses only pointers and 32-bit loads/stores on RV32.
+  int64_t left=c->x,top=c->y,right=left+c->w,bottom=top+c->h;
+  if(left<0)left=0;
+  if(top<0)top=0;
+  if(right>width)right=width;
+  if(bottom>height)bottom=height;
+  if(c->w>0 && c->h>0 && right>left && bottom>top){
+    int count=(int)(right-left);
+    const uint32_t *src=pixels+(size_t)(top-c->y)*(size_t)c->w+(size_t)(left-c->x);
+    volatile uint32_t *dst=fb+(size_t)top*width+(size_t)left;
+    for(int y=(int)top;y<(int)bottom;y++){
+      for(int x=0;x<count;x++)dst[x]=src[x];
+      if(y+1<(int)bottom){src+=c->w;dst+=width;}
+    }
   }
   if(c->sync)*(volatile uint32_t *)0xa0000104=1;
 }
