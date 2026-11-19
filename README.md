@@ -17,6 +17,8 @@
 
 ## 文档
 
+- [课程报告与答辩材料 Word 和文本](reports/README.md)
+
 - [环境配置和使用说明](docs/environment.md)
 - [学习进度日志](docs/progress.md)
 - [前八周实验内容、运行方法与验收范围](docs/weeks01-08.md)
